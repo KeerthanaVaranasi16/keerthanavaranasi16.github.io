@@ -2,8 +2,6 @@
 
 Personal portfolio website of **Keerthana Varanasi**, Backend Engineer at Dhan AI.
 
-Designed with **editorial minimalism**, high-performance Vanilla Web technologies, and unique backend-themed interactive features.
-
 ---
 
 ## 👤 About Keerthana
@@ -51,5 +49,3 @@ At **Dhan AI**, Keerthana builds scalable platforms supporting **350,000+ live c
 - **GitHub:** [github.com/KeerthanaVaranasi16](https://github.com/KeerthanaVaranasi16)
 
 ---
-
-&copy; 2026 Keerthana Varanasi. All rights reserved.
