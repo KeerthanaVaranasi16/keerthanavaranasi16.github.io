@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://keerthanavaranasi.github.io/sitemap.xml
+Sitemap: https://keerthanavaranasi16.github.io/sitemap.xml

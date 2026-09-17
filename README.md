@@ -48,7 +48,7 @@ At **Dhan AI**, Keerthana builds scalable platforms supporting **350,000+ live c
 
 - **Email:** [keerthanavaranasi16@gmail.com](mailto:keerthanavaranasi16@gmail.com)
 - **LinkedIn:** [linkedin.com/in/keerthanavaranasi](https://linkedin.com/in/keerthanavaranasi)
-- **GitHub:** [github.com/KeerthanaVaranasi](https://github.com/KeerthanaVaranasi)
+- **GitHub:** [github.com/KeerthanaVaranasi16](https://github.com/KeerthanaVaranasi16)
 
 ---
 

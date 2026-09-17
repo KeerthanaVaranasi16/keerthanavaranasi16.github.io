@@ -34,7 +34,7 @@
       availability: "Open to select backend engineering opportunities",
       contact: {
         email: "keerthanavaranasi16@gmail.com",
-        github: "https://github.com/KeerthanaVaranasi",
+        github: "https://github.com/KeerthanaVaranasi16",
         linkedin: "https://linkedin.com/in/keerthanavaranasi"
       }
     }
@@ -105,7 +105,7 @@
       <div class="api-request-card">
         <div class="api-request-meta">
           <span class="api-method-pill">GET</span>
-          <span class="api-endpoint-url">https://keerthanavaranasi.github.io/api/v1/profile</span>
+          <span class="api-endpoint-url">https://keerthanavaranasi16.github.io/api/v1/profile</span>
         </div>
         <div class="api-headers-preview">
           <div><span class="api-header-key">Host:</span> api.keerthanavaranasi.dev</div>
@@ -275,7 +275,7 @@
       case 'contact':
         outLine.innerHTML = `
           Email: keerthanavaranasi16@gmail.com<br>
-          GitHub: https://github.com/KeerthanaVaranasi<br>
+          GitHub: https://github.com/KeerthanaVaranasi16<br>
           LinkedIn: https://linkedin.com/in/keerthanavaranasi
         `;
         break;
