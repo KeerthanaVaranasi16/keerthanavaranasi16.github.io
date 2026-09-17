@@ -253,7 +253,7 @@
   }
 
   // --------------------------------------------------------------------------
-  // DHAN AI PROMOTION PROGRESS & EXPERIENCE INTERACTION
+  // DHAN AI PROGRESSION PROGRESS & EXPERIENCE INTERACTION
   // --------------------------------------------------------------------------
   const stageTabs = document.querySelectorAll('.promo-stage-col[data-stage]');
   const stagePanes = document.querySelectorAll('.promo-stage-pane');
@@ -264,36 +264,34 @@
 
   let currentActiveStage = '3';
 
-  function getStageProgress(stageNum) {
-    if (stageNum === '3') return '100%';
-    if (stageNum === '2') return '50%';
+  function updateProgressTrack(stageNum) {
+    if (!trackFill) return;
+    const isMobile = window.innerWidth <= 920;
+    const progressMap = { '1': '0%', '2': '50%', '3': '100%' };
+    const pct = progressMap[stageNum] || '100%';
 
-    // For Stage 1, compute the exact center of Node 1 relative to the track
-    const track = document.querySelector('.promo-track-bg');
-    const tab1 = document.getElementById('tab-stage-1');
-    if (track && tab1) {
-      const trackRect = track.getBoundingClientRect();
-      const node = tab1.querySelector('.promo-marker-node');
-      if (node && trackRect.width > 0) {
-        const nodeRect = node.getBoundingClientRect();
-        // Exact center of node 1:
-        const nodeCenter = (nodeRect.left + nodeRect.width / 2) - trackRect.left;
-        const pct = (nodeCenter / trackRect.width) * 100;
-        // Never exceed the node's right edge boundary:
-        const maxPct = ((nodeRect.right - 2) - trackRect.left) / trackRect.width * 100;
-        const clamped = Math.max(3, Math.min(maxPct, pct));
-        return `${clamped.toFixed(2)}%`;
-      }
+    if (isMobile) {
+      trackFill.style.width = '100%';
+      trackFill.style.height = pct;
+    } else {
+      trackFill.style.height = '100%';
+      trackFill.style.width = pct;
     }
-    return '7%'; // Fallback before layout or if not measured
+
+    trackFill.classList.toggle('zero-fill', stageNum === '1');
   }
 
   function selectStage(stageNum) {
     currentActiveStage = String(stageNum);
+    const activeInt = parseInt(stageNum, 10);
 
     stageTabs.forEach((tab) => {
-      const isSelected = tab.getAttribute('data-stage') === String(stageNum);
+      const tabInt = parseInt(tab.getAttribute('data-stage'), 10);
+      const isSelected = tabInt === activeInt;
+      const isCompleted = tabInt < activeInt;
+
       tab.classList.toggle('active-stage', isSelected);
+      tab.classList.toggle('completed-stage', isCompleted);
       tab.setAttribute('aria-selected', isSelected);
     });
 
@@ -302,25 +300,16 @@
       pane.classList.toggle('active', isActive);
     });
 
-    if (trackFill) {
-      trackFill.style.opacity = '1';
-      trackFill.style.width = getStageProgress(String(stageNum));
-    }
-
-    const bridge1 = document.getElementById('promo-bridge-1');
-    const bridge2 = document.getElementById('promo-bridge-2');
-    if (bridge1) {
-      bridge1.style.opacity = stageNum === '1' ? '0.4' : '1';
-    }
-    if (bridge2) {
-      bridge2.style.opacity = stageNum === '3' ? '1' : '0.4';
-    }
+    updateProgressTrack(String(stageNum));
   }
 
-  // Recalculate on window resize to ensure stage 1 fill is always pixel-perfect
+  // Initialize progress bar and active states on load
+  selectStage(currentActiveStage);
+
+  // Recalculate on window resize
   window.addEventListener('resize', () => {
-    if (trackFill && currentActiveStage) {
-      trackFill.style.width = getStageProgress(currentActiveStage);
+    if (currentActiveStage) {
+      updateProgressTrack(currentActiveStage);
     }
   });
 
