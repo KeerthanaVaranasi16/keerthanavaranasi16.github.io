@@ -873,11 +873,27 @@ svg {
 .cli-input {
   background: transparent;
   border: none;
-  color: var(--text-primary);
+  /* Terminal is always dark (--bg-code), so force light text regardless of theme */
+  color: #e2e8f0;
   font-family: var(--font-mono);
   font-size: 0.85rem;
   flex: 1;
   outline: none;
+  caret-color: var(--accent-primary);
+}
+
+/* Force readable text inside the always-dark terminal in light mode */
+html[data-theme="light"] .terminal-body {
+  color: #cbd5e1;
+}
+
+html[data-theme="light"] .cli-history,
+html[data-theme="light"] .cli-history span {
+  color: #cbd5e1;
+}
+
+html[data-theme="light"] .cli-history strong {
+  color: #f1f5f9;
 }
 
 /* JSON Syntax Highlight classes */
