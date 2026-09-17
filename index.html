@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Keerthana Varanasi â€” Backend Engineer</title>
+  <title>Keerthana Varanasi &mdash; Backend Engineer</title>
   <meta name="description"
     content="Portfolio of Keerthana Varanasi, Backend Engineer at Dhan AI. Specializing in high-scale Node.js & TypeScript microservices, GraphQL, REST APIs, Kafka, and Redis caching supporting 350K+ live telecom customers.">
   <meta name="author" content="Keerthana Varanasi">
@@ -14,8 +14,8 @@
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Keerthana Varanasi â€” Portfolio">
-  <meta property="og:title" content="Keerthana Varanasi â€” Backend Engineer">
+  <meta property="og:site_name" content="Keerthana Varanasi &mdash; Portfolio">
+  <meta property="og:title" content="Keerthana Varanasi &mdash; Backend Engineer">
   <meta property="og:description"
     content="Software Engineer with 2+ years building scalable distributed backends, GraphQL/REST APIs, event-driven pipelines with Kafka, and Redis caching supporting 350K+ customers at Dhan AI.">
   <meta property="og:url" content="https://keerthanavaranasi16.github.io/">
@@ -23,13 +23,13 @@
   <meta property="og:image" content="https://keerthanavaranasi16.github.io/assets/social-preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Keerthana Varanasi â€” Backend Engineer">
+  <meta property="og:image:alt" content="Keerthana Varanasi &mdash; Backend Engineer">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://keerthanavaranasi16.github.io/assets/social-preview.png">
-  <meta name="twitter:image:alt" content="Keerthana Varanasi â€” Backend Engineer">
-  <meta name="twitter:title" content="Keerthana Varanasi â€” Backend Engineer">
+  <meta name="twitter:image:alt" content="Keerthana Varanasi &mdash; Backend Engineer">
+  <meta name="twitter:title" content="Keerthana Varanasi &mdash; Backend Engineer">
   <meta name="twitter:description"
     content="Software Engineer with 2+ years building scalable distributed backends, GraphQL/REST APIs, event-driven pipelines with Kafka, and Redis caching supporting 350K+ customers at Dhan AI.">
 
@@ -94,8 +94,12 @@
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
+  <!-- Font Awesome & Devicon for Skill Brand Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/css/main.css?v=3.2">
+  <link rel="stylesheet" href="assets/css/main.css?v=3.3">
 </head>
 
 <body>
@@ -285,37 +289,47 @@
         <div class="topology-grid">
           <div class="topology-node active" data-node="clients" id="node-clients">
             <span class="node-step">Tier 01</span>
-            <div class="node-icon">ðŸ“±</div>
+            <div class="node-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            </div>
             <div class="node-title">Client Tier</div>
             <div class="node-tech">Residential Web / App</div>
           </div>
 
           <div class="topology-node" data-node="gateway" id="node-gateway">
             <span class="node-step">Tier 02</span>
-            <div class="node-icon">âš¡</div>
+            <div class="node-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
             <div class="node-title">API Middleware</div>
-            <div class="node-tech">Node.js Â· TS Â· GraphQL</div>
+            <div class="node-tech">Node.js &middot; TS &middot; GraphQL</div>
           </div>
 
           <div class="topology-node" data-node="kafka" id="node-kafka">
             <span class="node-step">Tier 03</span>
-            <div class="node-icon">ðŸŒŠ</div>
+            <div class="node-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 2 11 13"></polygon><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </div>
             <div class="node-title">Event Streaming</div>
             <div class="node-tech">Apache Kafka</div>
           </div>
 
           <div class="topology-node" data-node="storage" id="node-storage">
             <span class="node-step">Tier 04</span>
-            <div class="node-icon">ðŸ’¾</div>
+            <div class="node-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            </div>
             <div class="node-title">Cache &amp; Storage</div>
-            <div class="node-tech">Redis Â· Postgres Â· Mongo</div>
+            <div class="node-tech">Redis &middot; Postgres &middot; Mongo</div>
           </div>
 
           <div class="topology-node" data-node="integrations" id="node-integrations">
             <span class="node-step">Tier 05</span>
-            <div class="node-icon">ðŸ”</div>
+            <div class="node-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
             <div class="node-title">Integrations &amp; Auth</div>
-            <div class="node-tech">Salesforce Â· Dynamics Â· Firebase</div>
+            <div class="node-tech">Salesforce &middot; Dynamics &middot; Firebase</div>
           </div>
         </div>
 
@@ -361,14 +375,14 @@
               </span>
               <div>
                 <h3 class="promo-bar-heading">Dhan AI Career Progression</h3>
-                <p class="promo-bar-subheading">From Intern to SDE 1 Â· 2 Consecutive Promotions in 2 Years</p>
+                <p class="promo-bar-subheading">From Intern to SDE 1</p>
               </div>
             </div>
 
             <div class="promo-bar-controls">
               <div class="promo-badge-stat">
                 <span class="promo-stat-dot"></span>
-                <span>2 Consecutive Promotions</span>
+                <span>3 Roles &middot; 2 Years</span>
               </div>
               <button type="button" class="promo-view-toggle-btn" id="promo-view-toggle"
                 aria-label="Toggle all stages view">
@@ -383,7 +397,7 @@
               <div class="promo-track-fill" id="promo-track-fill"></div>
             </div>
 
-            <div class="promo-stages-grid" role="tablist" aria-label="Dhan AI Promotion Stages">
+            <div class="promo-stages-grid" role="tablist" aria-label="Dhan AI Career Stages">
               <!-- STAGE 1: Intern -->
               <button type="button" class="promo-stage-col stage-1" role="tab" aria-selected="false" data-stage="1"
                 id="tab-stage-1">
@@ -395,7 +409,7 @@
                 <div class="promo-stage-details">
                   <span class="stage-tag">Career Start</span>
                   <h4 class="stage-title">Backend Developer Intern</h4>
-                  <div class="stage-timeline">Jan 2024 â€“ Jun 2024</div>
+                  <div class="stage-timeline">Jan 2024 &ndash; Jun 2024</div>
                 </div>
               </button>
 
@@ -410,7 +424,7 @@
                     </svg>
                   </div>
                   <div class="promo-bridge-text">
-                    <strong>PROMOTION 1</strong>
+                    <strong>FULL-TIME</strong>
                     <span>Offered Full-Time Role</span>
                   </div>
                 </div>
@@ -425,9 +439,9 @@
                   </div>
                 </div>
                 <div class="promo-stage-details">
-                  <span class="stage-tag promoted-tag">Promoted</span>
+                  <span class="stage-tag promoted-tag">Full-Time</span>
                   <h4 class="stage-title">Junior Software Engineer</h4>
-                  <div class="stage-timeline">Jul 2024 â€“ Jun 2025</div>
+                  <div class="stage-timeline">Jul 2024 &ndash; Jun 2025</div>
                 </div>
               </button>
 
@@ -442,7 +456,7 @@
                     </svg>
                   </div>
                   <div class="promo-bridge-text">
-                    <strong>PROMOTION 2</strong>
+                    <strong>SDE 1</strong>
                     <span>Advanced to SDE 1</span>
                   </div>
                 </div>
@@ -464,7 +478,7 @@
                 <div class="promo-stage-details">
                   <span class="stage-tag current-tag">Current Role</span>
                   <h4 class="stage-title">SDE 1</h4>
-                  <div class="stage-timeline">Jul 2025 â€“ Present</div>
+                  <div class="stage-timeline">Jul 2025 &ndash; Present</div>
                 </div>
               </button>
             </div>
@@ -478,11 +492,11 @@
                 <div>
                   <div class="pane-role-title-wrap">
                     <h3 class="pane-role-title">SDE 1</h3>
-                    <span class="pane-promotion-badge">âš¡ Current Role Â· Promoted Jul 2025</span>
+                    <span class="pane-promotion-badge">&#9733; Current Role &middot; Since Jul 2025</span>
                   </div>
-                  <div class="pane-company">Dhan AI Â· Full-Time Â· Distributed Systems &amp; Core APIs</div>
+                  <div class="pane-company">Dhan AI &middot; Full-Time &middot; Distributed Systems &amp; Core APIs</div>
                 </div>
-                <div class="pane-period">July 2025 â€“ Present</div>
+                <div class="pane-period">July 2025 &ndash; Present</div>
               </div>
 
               <p class="pane-description">
@@ -516,11 +530,11 @@
                 <div>
                   <div class="pane-role-title-wrap">
                     <h3 class="pane-role-title">Junior Software Engineer</h3>
-                    <span class="pane-promotion-badge">â†‘ Promotion 1 Â· Full-Time Transition</span>
+                    <span class="pane-promotion-badge">&uarr; Full-Time &middot; Jul 2024</span>
                   </div>
-                  <div class="pane-company">Dhan AI Â· Full-Time Â· APIs &amp; Enterprise Integrations</div>
+                  <div class="pane-company">Dhan AI &middot; Full-Time &middot; APIs &amp; Enterprise Integrations</div>
                 </div>
-                <div class="pane-period">July 2024 â€“ June 2025</div>
+                <div class="pane-period">July 2024 &ndash; June 2025</div>
               </div>
 
               <p class="pane-description">
@@ -554,11 +568,11 @@
                 <div>
                   <div class="pane-role-title-wrap">
                     <h3 class="pane-role-title">Backend Developer Intern</h3>
-                    <span class="pane-entry-badge">ðŸŒ± Career Inception Â· Dhan AI</span>
+                    <span class="pane-entry-badge">&#127807; Career Start &middot; Dhan AI</span>
                   </div>
-                  <div class="pane-company">Dhan AI Â· Internship Â· Core Backend Engineering</div>
+                  <div class="pane-company">Dhan AI &middot; Internship &middot; Core Backend Engineering</div>
                 </div>
-                <div class="pane-period">January 2024 â€“ June 2024</div>
+                <div class="pane-period">January 2024 &ndash; June 2024</div>
               </div>
 
               <p class="pane-description">
@@ -602,25 +616,27 @@
           <!-- Languages -->
           <div class="skill-category-card">
             <div class="skill-card-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="16 18 22 12 16 6"></polyline>
                 <polyline points="8 6 2 12 8 18"></polyline>
               </svg>
             </div>
             <h3 class="skill-card-title">Languages</h3>
             <div class="skill-pills">
-              <span class="skill-pill">TypeScript</span>
-              <span class="skill-pill">JavaScript</span>
-              <span class="skill-pill">Node.js</span>
-              <span class="skill-pill">Python</span>
-              <span class="skill-pill">Java</span>
+              <span class="skill-pill"><i class="devicon-typescript-plain"></i> TypeScript</span>
+              <span class="skill-pill"><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span class="skill-pill"><i class="fa-brands fa-node-js"></i> Node.js</span>
+              <span class="skill-pill"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="skill-pill"><i class="fa-brands fa-java"></i> Java</span>
             </div>
           </div>
 
           <!-- API & Architecture -->
           <div class="skill-category-card">
             <div class="skill-card-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="5" r="3"></circle>
                 <line x1="12" y1="8" x2="12" y2="13"></line>
                 <circle cx="6" cy="18" r="3"></circle>
@@ -631,19 +647,20 @@
             </div>
             <h3 class="skill-card-title">API &amp; Architecture</h3>
             <div class="skill-pills">
-              <span class="skill-pill">GraphQL</span>
-              <span class="skill-pill">REST APIs</span>
-              <span class="skill-pill">Microservices</span>
-              <span class="skill-pill">Event-Driven Design</span>
-              <span class="skill-pill">API Gateway</span>
-              <span class="skill-pill">Error Analysis</span>
+              <span class="skill-pill"><i class="devicon-graphql-plain"></i> GraphQL</span>
+              <span class="skill-pill"><i class="fa-solid fa-network-wired"></i> REST APIs</span>
+              <span class="skill-pill"><i class="fa-solid fa-cubes"></i> Microservices</span>
+              <span class="skill-pill"><i class="fa-solid fa-bolt"></i> Event-Driven Design</span>
+              <span class="skill-pill"><i class="fa-solid fa-route"></i> API Gateway</span>
+              <span class="skill-pill"><i class="fa-solid fa-bug"></i> Error Analysis</span>
             </div>
           </div>
 
           <!-- Databases & Caching -->
           <div class="skill-category-card">
             <div class="skill-card-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
                 <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
                 <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
                 <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
@@ -651,17 +668,18 @@
             </div>
             <h3 class="skill-card-title">Databases &amp; Cache</h3>
             <div class="skill-pills">
-              <span class="skill-pill">Redis (In-Memory Cache)</span>
-              <span class="skill-pill">PostgreSQL</span>
-              <span class="skill-pill">MongoDB</span>
-              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill"><i class="devicon-redis-plain"></i> Redis (In-Memory Cache)</span>
+              <span class="skill-pill"><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
+              <span class="skill-pill"><i class="devicon-mongodb-plain"></i> MongoDB</span>
+              <span class="skill-pill"><i class="devicon-mysql-plain"></i> MySQL</span>
             </div>
           </div>
 
           <!-- Integrations & Cloud -->
           <div class="skill-category-card">
             <div class="skill-card-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                 <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
                 <line x1="12" y1="12" x2="12" y2="16"></line>
@@ -670,12 +688,12 @@
             </div>
             <h3 class="skill-card-title">Integrations &amp; Ecosystem</h3>
             <div class="skill-pills">
-              <span class="skill-pill">Apache Kafka</span>
-              <span class="skill-pill">Salesforce CRM</span>
-              <span class="skill-pill">Microsoft Dynamics 365</span>
-              <span class="skill-pill">Firebase Auth (RBAC)</span>
-              <span class="skill-pill">Docker</span>
-              <span class="skill-pill">Git</span>
+              <span class="skill-pill"><i class="devicon-apachekafka-original"></i> Apache Kafka</span>
+              <span class="skill-pill"><i class="fa-brands fa-salesforce"></i> Salesforce CRM</span>
+              <span class="skill-pill"><i class="fa-brands fa-microsoft"></i> Microsoft Dynamics 365</span>
+              <span class="skill-pill"><i class="devicon-firebase-plain"></i> Firebase Auth (RBAC)</span>
+              <span class="skill-pill"><i class="fa-brands fa-docker"></i> Docker</span>
+              <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git</span>
             </div>
           </div>
         </div>
@@ -696,7 +714,7 @@
           <article class="project-card" id="project-portal">
             <div class="project-header">
               <div>
-                <span class="project-category">Â· 350,000+ Live Users</span>
+                <span class="project-category">· 350,000+ Live Users</span>
                 <h3 class="project-title">Customer Self-Service Portal</h3>
               </div>
 
@@ -749,7 +767,7 @@
 
         <div class="education-list">
           <div class="education-row">
-            <div class="education-period">2020 â€“ 2024</div>
+            <div class="education-period">2020 - 2024</div>
             <div class="education-main">
               <h3 class="education-degree">B.Tech in Information Technology</h3>
               <div class="education-institution">Shri Vishnu Engineering College For Women</div>
@@ -763,7 +781,7 @@
           </div>
 
           <div class="education-row">
-            <div class="education-period">2018 â€“ 2020</div>
+            <div class="education-period">2018 - 2020</div>
             <div class="education-main">
               <h3 class="education-degree">Intermediate (MPC)</h3>
               <div class="education-institution">Narayana Junior College</div>
@@ -775,7 +793,7 @@
           </div>
 
           <div class="education-row">
-            <div class="education-period">2017 â€“ 2018</div>
+            <div class="education-period">2017 - 2018</div>
             <div class="education-main">
               <h3 class="education-degree">Secondary School Certificate (SSC)</h3>
               <div class="education-institution">DAV Public School</div>
