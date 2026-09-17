@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keerthana Varanasi — Backend Engineer</title>
+  <meta name="description"
+    content="Portfolio of Keerthana Varanasi, Backend Engineer at Dhan AI. Specializing in high-scale Node.js & TypeScript microservices, GraphQL, REST APIs, Kafka, and Redis caching supporting 350K+ live telecom customers.">
+  <meta name="author" content="Keerthana Varanasi">
+  <meta name="theme-color" content="#090b10">
+  <link rel="canonical" href="https://keerthanavaranasi.github.io/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Keerthana Varanasi — Portfolio">
+  <meta property="og:title" content="Keerthana Varanasi — Backend Engineer">
+  <meta property="og:description"
+    content="Software Engineer with 2+ years building scalable distributed backends, GraphQL/REST APIs, event-driven pipelines with Kafka, and Redis caching supporting 350K+ customers at Dhan AI.">
+  <meta property="og:url" content="https://keerthanavaranasi.github.io/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://keerthanavaranasi.github.io/assets/social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Keerthana Varanasi — Backend Engineer">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://keerthanavaranasi.github.io/assets/social-preview.png">
+  <meta name="twitter:image:alt" content="Keerthana Varanasi — Backend Engineer">
+  <meta name="twitter:title" content="Keerthana Varanasi — Backend Engineer">
+  <meta name="twitter:description"
+    content="Software Engineer with 2+ years building scalable distributed backends, GraphQL/REST APIs, event-driven pipelines with Kafka, and Redis caching supporting 350K+ customers at Dhan AI.">
+
+  <!-- Structured Data: Person & WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Keerthana Varanasi",
+    "jobTitle": "Backend Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Dhan AI"
+    },
+    "email": "mailto:keerthanavaranasi16@gmail.com",
+    "url": "https://keerthanavaranasi.github.io/",
+    "sameAs": [
+      "https://github.com/KeerthanaVaranasi",
+      "https://linkedin.com/in/keerthanavaranasi"
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Shri Vishnu Engineering College For Women"
+    },
+    "knowsAbout": [
+      "Node.js",
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "Java",
+      "GraphQL",
+      "REST APIs",
+      "Microservices",
+      "Apache Kafka",
+      "Redis",
+      "PostgreSQL",
+      "MongoDB",
+      "MySQL",
+      "Salesforce CRM",
+      "Microsoft Dynamics 365",
+      "Firebase Auth"
+    ]
+  }
+  </script>
+
+  <!-- Prevent Theme FOUC -->
+  <script>
+    (function () {
+      try {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        const theme = savedTheme || (prefersLight ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) { }
+    })();
+  </script>
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/main.css?v=3.1">
+</head>
+
+<body>
+
+  <!-- SITE HEADER & NAVIGATION -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-inner">
+      <a href="#hero" class="brand-link" id="brand-logo" aria-label="Keerthana Varanasi Homepage">
+        <span class="brand-badge">KV</span>
+        <span>Keerthana Varanasi</span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#hero" class="nav-link active">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Status, Search, Theme Toggle) -->
+      <div class="nav-actions">
+        <div class="status-pill" title="Current Status at Dhan AI">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>SDE&nbsp;1&nbsp;@&nbsp;Dhan&nbsp;AI</span>
+        </div>
+
+        <button type="button" class="icon-btn" id="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+          <span id="theme-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </span>
+        </button>
+
+        <button type="button" class="icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle mobile menu"
+          aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text">Keerthana Varanasi</span>.<br>
+              Backend Engineer.
+            </h1>
+
+            <p class="hero-description">
+              Software Engineer with <strong>2+ years of experience</strong> developing and maintaining
+              scalable backend applications using <strong>Node.js, TypeScript, GraphQL, and REST APIs</strong>. I build
+              secure integrations, event-driven systems with <strong>Apache
+                Kafka</strong>, and low-latency services with <strong>Redis</strong> supporting <strong>350,000+ live
+                telecom customers</strong>. I love Building systems that make sense.
+            </p>
+
+            <!-- Metrics Quick Bar -->
+            <div class="metrics-strip">
+              <div class="metric-card">
+                <div class="metric-number">2<span class="metric-accent">+</span></div>
+                <div class="metric-label">Years Backend Exp</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-number">350K<span class="metric-accent">+</span></div>
+                <div class="metric-label">Telecom Users Supported</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-number">&lt; 10<span class="metric-accent">ms</span></div>
+                <div class="metric-label">Redis Cache Latency</div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="hero-actions">
+              <a href="#api-console" class="btn btn-primary" id="hero-btn-api">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+                <span>Interactive API Console</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE API & GRAPHQL PLAYGROUND -->
+    <section class="api-console-section" id="api-console">
+      <div class="container">
+        <div class="section-label">Developer API</div>
+        <h2 class="section-title">Backend Profile Endpoint</h2>
+        <p class="section-subtitle">
+          Query my developer profile, technical stack, and background via live simulated JSON response.
+        </p>
+
+        <div class="terminal-window">
+          <!-- Terminal Header -->
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+
+            <!-- Endpoint Tabs -->
+            <div class="terminal-endpoint-tabs">
+              <button type="button" class="endpoint-tab active" data-tab="profile">
+                <span class="http-method get">GET</span>
+                <span>/api/v1/profile</span>
+              </button>
+              <button type="button" class="endpoint-tab" data-tab="cli">
+                <span class="http-method cli">CLI</span>
+                <span>terminal-mode</span>
+              </button>
+            </div>
+
+            <!-- Terminal Actions -->
+            <div class="terminal-actions">
+              <button type="button" class="terminal-btn execute" id="terminal-execute-btn">
+                <span>Send Request</span>
+              </button>
+              <button type="button" class="terminal-btn" id="terminal-reset-btn" style="display: none;"
+                title="Reset console to initial state">
+                <span>Reset</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Terminal Content Body -->
+          <div class="terminal-body" id="terminal-response-body">
+            <!-- Populated dynamically via api-console.js -->
+          </div>
+
+          <!-- Terminal Status Bar -->
+          <div class="terminal-status-bar">
+            <div>
+              Status: <span id="terminal-status-code" style="color: var(--text-muted); font-weight: 600;">Idle</span>
+            </div>
+            <div>
+              Content-Type: <code id="terminal-content-type">application/json</code>
+            </div>
+            <div>
+              Latency: <span id="terminal-latency" style="color: var(--text-muted); font-weight: 600;">--</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SYSTEM ARCHITECTURE TOPOLOGY -->
+    <section class="topology-section" id="topology">
+      <div class="container">
+        <div class="section-label">System Topology</div>
+        <h2 class="section-title">Telecom Self-Service Platform Overview</h2>
+        <p class="section-subtitle">
+          How our customer-facing backend services are structured and integrated at Dhan AI supporting 350,000+ live
+          subscribers. Click on any component to inspect the implementation details.
+        </p>
+
+        <!-- Interactive Node Grid -->
+        <div class="topology-grid">
+          <div class="topology-node active" data-node="clients" id="node-clients">
+            <span class="node-step">Tier 01</span>
+            <div class="node-icon">📱</div>
+            <div class="node-title">Client Tier</div>
+            <div class="node-tech">Residential Web / App</div>
+          </div>
+
+          <div class="topology-node" data-node="gateway" id="node-gateway">
+            <span class="node-step">Tier 02</span>
+            <div class="node-icon">⚡</div>
+            <div class="node-title">API Middleware</div>
+            <div class="node-tech">Node.js · TS · GraphQL</div>
+          </div>
+
+          <div class="topology-node" data-node="kafka" id="node-kafka">
+            <span class="node-step">Tier 03</span>
+            <div class="node-icon">🌊</div>
+            <div class="node-title">Event Streaming</div>
+            <div class="node-tech">Apache Kafka</div>
+          </div>
+
+          <div class="topology-node" data-node="storage" id="node-storage">
+            <span class="node-step">Tier 04</span>
+            <div class="node-icon">💾</div>
+            <div class="node-title">Cache &amp; Storage</div>
+            <div class="node-tech">Redis · Postgres · Mongo</div>
+          </div>
+
+          <div class="topology-node" data-node="integrations" id="node-integrations">
+            <span class="node-step">Tier 05</span>
+            <div class="node-icon">🔐</div>
+            <div class="node-title">Integrations &amp; Auth</div>
+            <div class="node-tech">Salesforce · Dynamics · Firebase</div>
+          </div>
+        </div>
+
+        <!-- Inspector Card for active node -->
+        <div class="topology-inspector" id="topology-inspector">
+          <div class="inspector-header">
+            <h3 class="inspector-title" id="inspector-title">Residential Telecom Clients</h3>
+            <span class="inspector-tag" id="inspector-tag">350K+ Active Users</span>
+          </div>
+          <p class="inspector-desc" id="inspector-desc">
+            Web &amp; mobile applications serving residential telecom subscribers for self-service operations, bill
+            payments, and plan changes.
+          </p>
+          <ul class="inspector-points" id="inspector-points">
+            <li class="inspector-point">High-concurrency traffic during monthly billing cycles.</li>
+            <li class="inspector-point">Low-latency requirements for real-time account and plan balance inquiries.</li>
+            <li class="inspector-point">Cross-platform authentication with secure session handoffs.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE TIMELINE (DHAN AI PROGRESSION) -->
+    <section class="experience-section" id="experience">
+      <div class="container">
+        <div class="section-label">Career Journey</div>
+        <h2 class="section-title">Engineering Experience</h2>
+        <p class="section-subtitle">
+          Continuous growth and technical leadership in backend engineering at Dhan AI.
+        </p>
+
+        <!-- DHAN AI PROMOTION PROGRESS & UNIFIED ENGINEERING EXPERIENCE -->
+        <div class="promotion-bar-component" id="dhan-experience-component"
+          aria-label="Dhan AI Career Promotion Progression">
+          <div class="promo-bar-top">
+            <div class="promo-bar-title-group">
+              <span class="promo-bar-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <polyline points="5 11 12 4 19 11"></polyline>
+                </svg>
+              </span>
+              <div>
+                <h3 class="promo-bar-heading">Dhan AI Career Progression</h3>
+                <p class="promo-bar-subheading">From Intern to SDE 1 · 2 Consecutive Promotions in 2 Years</p>
+              </div>
+            </div>
+
+            <div class="promo-bar-controls">
+              <div class="promo-badge-stat">
+                <span class="promo-stat-dot"></span>
+                <span>2 Consecutive Promotions</span>
+              </div>
+              <button type="button" class="promo-view-toggle-btn" id="promo-view-toggle"
+                aria-label="Toggle all stages view">
+                <span id="promo-toggle-text">Show All Phases</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- THE CONTINUOUS PROGRESS BAR TRACK (CLICKABLE STAGES) -->
+          <div class="promo-visual-rail">
+            <div class="promo-track-bg">
+              <div class="promo-track-fill" id="promo-track-fill"></div>
+            </div>
+
+            <div class="promo-stages-grid" role="tablist" aria-label="Dhan AI Promotion Stages">
+              <!-- STAGE 1: Intern -->
+              <button type="button" class="promo-stage-col stage-1" role="tab" aria-selected="false" data-stage="1"
+                id="tab-stage-1">
+                <div class="promo-marker-wrap">
+                  <div class="promo-marker-node">
+                    <span class="node-index">01</span>
+                  </div>
+                </div>
+                <div class="promo-stage-details">
+                  <span class="stage-tag">Career Start</span>
+                  <h4 class="stage-title">Backend Developer Intern</h4>
+                  <div class="stage-timeline">Jan 2024 – Jun 2024</div>
+                </div>
+              </button>
+
+              <!-- PROMOTION BRIDGE 1 -->
+              <div class="promo-bridge-col" id="promo-bridge-1">
+                <div class="promo-bridge-pill">
+                  <div class="promo-bridge-arrow">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </div>
+                  <div class="promo-bridge-text">
+                    <strong>PROMOTION 1</strong>
+                    <span>Offered Full-Time Role</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- STAGE 2: Junior SE -->
+              <button type="button" class="promo-stage-col stage-2" role="tab" aria-selected="false" data-stage="2"
+                id="tab-stage-2">
+                <div class="promo-marker-wrap">
+                  <div class="promo-marker-node">
+                    <span class="node-index">02</span>
+                  </div>
+                </div>
+                <div class="promo-stage-details">
+                  <span class="stage-tag promoted-tag">Promoted</span>
+                  <h4 class="stage-title">Junior Software Engineer</h4>
+                  <div class="stage-timeline">Jul 2024 – Jun 2025</div>
+                </div>
+              </button>
+
+              <!-- PROMOTION BRIDGE 2 -->
+              <div class="promo-bridge-col" id="promo-bridge-2">
+                <div class="promo-bridge-pill">
+                  <div class="promo-bridge-arrow">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </div>
+                  <div class="promo-bridge-text">
+                    <strong>PROMOTION 2</strong>
+                    <span>Advanced to SDE 1</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- STAGE 3: SDE 1 (Current Role) -->
+              <button type="button" class="promo-stage-col stage-3 active-stage" role="tab" aria-selected="true"
+                data-stage="3" id="tab-stage-3">
+                <div class="promo-marker-wrap">
+                  <div class="promo-marker-node current-beacon" title="Current Role">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"
+                      stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                      </polygon>
+                    </svg>
+                  </div>
+                </div>
+                <div class="promo-stage-details">
+                  <span class="stage-tag current-tag">Current Role</span>
+                  <h4 class="stage-title">SDE 1</h4>
+                  <div class="stage-timeline">Jul 2025 – Present</div>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- ENHANCED EXPERIENCE PANEL -->
+          <div class="promo-details-viewport">
+            <!-- STAGE 3 CONTENT (SDE 1 - ACTIVE BY DEFAULT) -->
+            <div class="promo-stage-pane active" id="stage-pane-3" role="tabpanel" aria-labelledby="tab-stage-3">
+              <div class="stage-pane-header">
+                <div>
+                  <div class="pane-role-title-wrap">
+                    <h3 class="pane-role-title">SDE 1</h3>
+                    <span class="pane-promotion-badge">⚡ Current Role · Promoted Jul 2025</span>
+                  </div>
+                  <div class="pane-company">Dhan AI · Full-Time · Distributed Systems &amp; Core APIs</div>
+                </div>
+                <div class="pane-period">July 2025 – Present</div>
+              </div>
+
+              <p class="pane-description">
+                Developing backend applications and contributing to API enhancements for high-scale platforms supporting
+                <strong>350,000+ live residential customers and major telecom operations</strong>.
+              </p>
+
+              <ul class="pane-bullets">
+                <li>Developed high-scale platforms using Node.js, TypeScript &amp; Python, supporting 350K+ live
+                  residential customers and critical telecom operations.</li>
+                <li>Contributed to core backend architecture improvements and API enhancements supporting multiple
+                  mission-critical business initiatives.</li>
+                <li>Conducted deep error scenario analyses and performance optimizations for live customer-facing
+                  applications.</li>
+              </ul>
+
+              <div class="pane-tech-badges">
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">GraphQL</span>
+                <span class="tech-badge">Apache Kafka</span>
+                <span class="tech-badge">Redis</span>
+                <span class="tech-badge">Distributed Systems</span>
+              </div>
+            </div>
+
+            <!-- STAGE 2 CONTENT (Junior Software Engineer) -->
+            <div class="promo-stage-pane" id="stage-pane-2" role="tabpanel" aria-labelledby="tab-stage-2">
+              <div class="stage-pane-header">
+                <div>
+                  <div class="pane-role-title-wrap">
+                    <h3 class="pane-role-title">Junior Software Engineer</h3>
+                    <span class="pane-promotion-badge">↑ Promotion 1 · Full-Time Transition</span>
+                  </div>
+                  <div class="pane-company">Dhan AI · Full-Time · APIs &amp; Enterprise Integrations</div>
+                </div>
+                <div class="pane-period">July 2024 – June 2025</div>
+              </div>
+
+              <p class="pane-description">
+                Engineered production GraphQL and REST APIs, integrated enterprise CRMs, and built event-driven activity
+                streaming pipelines.
+              </p>
+
+              <ul class="pane-bullets">
+                <li>Designed and developed scalable GraphQL and REST APIs using Node.js and TypeScript for
+                  customer-facing self-service portals.</li>
+                <li>Enhanced customer-facing solutions by integrating secure, data-driven systems using Apache Kafka,
+                  Microsoft Dynamics 365, Salesforce CRM, and Firebase Auth.</li>
+                <li>Implemented Redis caching strategies to accelerate frequently requested customer account and billing
+                  endpoints to sub-10ms latency.</li>
+              </ul>
+
+              <div class="pane-tech-badges">
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">GraphQL</span>
+                <span class="tech-badge">REST APIs</span>
+                <span class="tech-badge">Salesforce CRM</span>
+                <span class="tech-badge">Dynamics 365</span>
+                <span class="tech-badge">Firebase Auth</span>
+              </div>
+            </div>
+
+            <!-- STAGE 1 CONTENT (Backend Developer Intern) -->
+            <div class="promo-stage-pane" id="stage-pane-1" role="tabpanel" aria-labelledby="tab-stage-1">
+              <div class="stage-pane-header">
+                <div>
+                  <div class="pane-role-title-wrap">
+                    <h3 class="pane-role-title">Backend Developer Intern</h3>
+                    <span class="pane-entry-badge">🌱 Career Inception · Dhan AI</span>
+                  </div>
+                  <div class="pane-company">Dhan AI · Internship · Core Backend Engineering</div>
+                </div>
+                <div class="pane-period">January 2024 – June 2024</div>
+              </div>
+
+              <p class="pane-description">
+                Hands-on backend development focusing on API design, error handling, performance profiling, and
+                collaborative team engineering.
+              </p>
+
+              <ul class="pane-bullets">
+                <li>Gained hands-on experience with backend technologies, contributing effectively to real-world
+                  customer platforms.</li>
+                <li>Optimized backend performance and reliability by analyzing edge-case error scenarios and debugging
+                  latency bottlenecks.</li>
+                <li>Collaborated in agile cross-functional engineering teams following modern Git workflows and
+                  automated testing.</li>
+              </ul>
+
+              <div class="pane-tech-badges">
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">REST APIs</span>
+                <span class="tech-badge">SQL</span>
+                <span class="tech-badge">Debugging</span>
+                <span class="tech-badge">Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="section-label">Core Competencies</div>
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">
+          Foundational engineering principles combined with modern backend and cloud technologies.
+        </p>
+
+        <div class="skills-grid">
+          <!-- Languages -->
+          <div class="skill-category-card">
+            <div class="skill-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Languages</h3>
+            <div class="skill-pills">
+              <span class="skill-pill">TypeScript</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">Node.js</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">Java</span>
+            </div>
+          </div>
+
+          <!-- API & Architecture -->
+          <div class="skill-category-card">
+            <div class="skill-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="5" r="3"></circle>
+                <line x1="12" y1="8" x2="12" y2="13"></line>
+                <circle cx="6" cy="18" r="3"></circle>
+                <circle cx="18" cy="18" r="3"></circle>
+                <line x1="9" y1="16.5" x2="12" y2="13"></line>
+                <line x1="15" y1="16.5" x2="12" y2="13"></line>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">API &amp; Architecture</h3>
+            <div class="skill-pills">
+              <span class="skill-pill">GraphQL</span>
+              <span class="skill-pill">REST APIs</span>
+              <span class="skill-pill">Microservices</span>
+              <span class="skill-pill">Event-Driven Design</span>
+              <span class="skill-pill">API Gateway</span>
+              <span class="skill-pill">Error Analysis</span>
+            </div>
+          </div>
+
+          <!-- Databases & Caching -->
+          <div class="skill-category-card">
+            <div class="skill-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Databases &amp; Cache</h3>
+            <div class="skill-pills">
+              <span class="skill-pill">Redis (In-Memory Cache)</span>
+              <span class="skill-pill">PostgreSQL</span>
+              <span class="skill-pill">MongoDB</span>
+              <span class="skill-pill">MySQL</span>
+            </div>
+          </div>
+
+          <!-- Integrations & Cloud -->
+          <div class="skill-category-card">
+            <div class="skill-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
+                <line x1="12" y1="12" x2="12" y2="16"></line>
+                <line x1="10" y1="14" x2="14" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Integrations &amp; Ecosystem</h3>
+            <div class="skill-pills">
+              <span class="skill-pill">Apache Kafka</span>
+              <span class="skill-pill">Salesforce CRM</span>
+              <span class="skill-pill">Microsoft Dynamics 365</span>
+              <span class="skill-pill">Firebase Auth (RBAC)</span>
+              <span class="skill-pill">Docker</span>
+              <span class="skill-pill">Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-label">Featured Work</div>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">
+          Real-world platforms and engineering implementations demonstrating backend scale and problem-solving.
+        </p>
+
+        <div class="projects-grid">
+          <!-- Project 1: Customer Self-Service Portal -->
+          <article class="project-card" id="project-portal">
+            <div class="project-header">
+              <div>
+                <span class="project-category">· 350,000+ Live Users</span>
+                <h3 class="project-title">Customer Self-Service Portal</h3>
+              </div>
+
+            </div>
+
+            <p class="project-desc">
+              High-scale customer-facing self-service platform designed and maintained for residential telecom
+              customers, powering real-time billing, account management, payment processing, and operational workflows.
+            </p>
+
+            <ul class="project-highlights">
+              <li class="project-highlight-item">Designed and developed scalable backend APIs using Node.js and
+                TypeScript supporting billing, payments, and customer operations.</li>
+              <li class="project-highlight-item">Integrated Firebase Authentication with robust role-based access
+                control (RBAC) to enforce secure authentication and authorization workflows.</li>
+              <li class="project-highlight-item">Leveraged Redis caching to optimize throughput and achieve sub-10ms
+                response times for high-frequency customer queries.</li>
+              <li class="project-highlight-item">Published customer activity events to Apache Kafka, enabling downstream
+                business analytics and automated behavior tracking.</li>
+              <li class="project-highlight-item">Integrated multiple microservices to deliver unified user experiences
+                across billing, payments, and account domains.</li>
+              <li class="project-highlight-item">Collaborated closely with cross-functional engineering teams to
+                troubleshoot complex production issues and ensure maximum system reliability.</li>
+            </ul>
+
+            <div class="tech-badges-list">
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">GraphQL</span>
+              <span class="tech-badge">Redis</span>
+              <span class="tech-badge">Apache Kafka</span>
+              <span class="tech-badge">Firebase Auth</span>
+              <span class="tech-badge">REST APIs</span>
+              <span class="tech-badge">Microservices</span>
+              <span class="tech-badge">Distributed Systems</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="credentials-section" id="education">
+      <div class="container">
+        <div class="section-label">Academic Background</div>
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">
+          Foundational engineering coursework in Information Technology, algorithms, and computing principles.
+        </p>
+
+        <div class="education-list">
+          <div class="education-row">
+            <div class="education-period">2020 – 2024</div>
+            <div class="education-main">
+              <h3 class="education-degree">B.Tech in Information Technology</h3>
+              <div class="education-institution">Shri Vishnu Engineering College For Women</div>
+              <p class="education-details">
+                Coursework in Software Engineering, Database Management Systems (DBMS), Computer Networks,
+                Object-Oriented
+                Programming, and Data Structures &amp; Algorithms.
+              </p>
+            </div>
+            <div class="education-tag">Undergraduate</div>
+          </div>
+
+          <div class="education-row">
+            <div class="education-period">2018 – 2020</div>
+            <div class="education-main">
+              <h3 class="education-degree">Intermediate (MPC)</h3>
+              <div class="education-institution">Narayana Junior College</div>
+              <p class="education-details">
+                Foundational coursework in Mathematics, Physics, and Chemistry.
+              </p>
+            </div>
+            <div class="education-tag">Higher Secondary</div>
+          </div>
+
+          <div class="education-row">
+            <div class="education-period">2017 – 2018</div>
+            <div class="education-main">
+              <h3 class="education-degree">Secondary School Certificate (SSC)</h3>
+              <div class="education-institution">DAV Public School</div>
+              <p class="education-details">
+                Core science, mathematics, and computing foundations.
+              </p>
+            </div>
+            <div class="education-tag">Secondary</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card-box">
+          <div class="section-label" style="justify-content: center;">Get in Touch</div>
+          <h2 class="contact-title">Let's Build Resilient Systems Together</h2>
+          <p class="contact-lead">
+            I'm always excited to discuss scalable backend development, high-performance GraphQL/REST APIs, event-driven
+            systems, and new engineering opportunities.
+          </p>
+
+          <div class="contact-options">
+            <button type="button" class="contact-item-btn" data-copy="keerthanavaranasi16@gmail.com"
+              data-copy-label="Copied keerthanavaranasi16@gmail.com!">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>keerthanavaranasi16@gmail.com</span>
+            </button>
+
+            <a href="https://linkedin.com/in/keerthanavaranasi" target="_blank" rel="noopener noreferrer"
+              class="contact-item-btn" id="contact-linkedin-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+
+            <a href="https://github.com/KeerthanaVaranasi" target="_blank" rel="noopener noreferrer"
+              class="contact-item-btn" id="contact-github-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z">
+                </path>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <a href="mailto:keerthanavaranasi16@gmail.com" class="btn btn-primary" id="footer-mailto-btn">
+              <span>Send Message Directly</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 Keerthana Varanasi.
+          </div>
+          <div class="footer-nav">
+            <a href="#hero">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FLOATING TOAST CONTAINER -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/main.js?v=3.0"></script>
+  <script src="assets/js/api-console.js?v=3.0"></script>
+</body>
+
+</html>

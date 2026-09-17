@@ -1,0 +1,129 @@
+{
+  "name": "Keerthana Varanasi",
+  "title": "Backend Engineer",
+  "email": "keerthanavaranasi16@gmail.com",
+  "linkedin": "https://linkedin.com/in/keerthanavaranasi",
+  "github": "https://github.com/KeerthanaVaranasi",
+  "about": {
+    "motto": "Building systems that make sense.",
+    "summary": "Software Engineer with 2+ years of experience in developing and maintaining scalable backend applications using Node.js, TypeScript, GraphQL, and REST APIs. I love Building systems that make sense. Experienced in building secure integrations, event-driven systems, database-driven applications, and automation solutions. Strong foundation in software development principles, API design, debugging, and performance optimization.",
+    "specialization": "Distributed backend architectures, GraphQL & REST API design, Redis caching, event-driven messaging with Kafka, and enterprise integrations (Salesforce CRM, Dynamics 365, Firebase Auth).",
+    "metrics": {
+      "experienceYears": "2+",
+      "liveCustomersSupported": "350K+",
+      "primaryStack": "Node.js, TypeScript, Python, GraphQL, Kafka, Redis"
+    }
+  },
+  "skills": {
+    "languages": [
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "Java",
+      "Node.js"
+    ],
+    "apiDevelopment": [
+      "GraphQL",
+      "REST APIs",
+      "Microservices Architecture",
+      "API Design",
+      "Performance Optimization"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MongoDB",
+      "MySQL",
+      "Redis (Caching)"
+    ],
+    "integrationsAndTools": [
+      "Apache Kafka",
+      "Salesforce CRM",
+      "Microsoft Dynamics 365",
+      "Firebase Auth",
+      "Git",
+      "Docker"
+    ]
+  },
+  "experience": [
+    {
+      "company": "Dhan AI",
+      "role": "SDE 1",
+      "period": "July 2025 – Present",
+      "location": "Hyderabad, India",
+      "type": "Full-time",
+      "description": "Developing backend applications and contributing to API enhancements for high-scale platforms supporting 350K+ live customers and major telecom operations.",
+      "highlights": [
+        "Developed and scaled backend services using Node.js, TypeScript, and Python for customer-facing applications.",
+        "Driving backend architectural enhancements and API optimizations across mission-critical business initiatives.",
+        "Collaborating with cross-functional teams to resolve complex error scenarios and optimize performance for live customer applications."
+      ]
+    },
+    {
+      "company": "Dhan AI",
+      "role": "Junior Software Engineer",
+      "period": "July 2024 – June 2025",
+      "location": "Hyderabad, India",
+      "type": "Full-time",
+      "description": "Designed and maintained scalable GraphQL and REST APIs, integrating event-driven systems and enterprise CRMs.",
+      "highlights": [
+        "Designed and implemented production GraphQL and REST APIs using Node.js and TypeScript.",
+        "Integrated event-driven data streaming pipelines using Apache Kafka for real-time customer activity analytics.",
+        "Built secure enterprise integrations with Salesforce CRM, Microsoft Dynamics 365, and Firebase Authentication."
+      ]
+    },
+    {
+      "company": "Dhan AI",
+      "role": "Backend Developer Intern",
+      "period": "January 2024 – June 2024",
+      "location": "Hyderabad, India",
+      "type": "Internship",
+      "description": "Contributed to backend services, error analysis, and performance optimization for production customer platforms.",
+      "highlights": [
+        "Gained hands-on experience with backend technologies, contributing to real-world customer-facing systems.",
+        "Diagnosed error scenarios, refactored bottlenecks, and improved API throughput and database query performance."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "customer-self-service-portal",
+      "title": "Customer Self-Service Portal",
+      "category": "Enterprise Backend & Distributed Systems",
+      "techStack": [
+        "Node.js",
+        "TypeScript",
+        "GraphQL",
+        "Redis",
+        "Kafka",
+        "Firebase Auth",
+        "REST APIs"
+      ],
+      "description": "High-scale customer-facing self-service platform supporting 350K+ residential telecom customers with real-time billing, account management, and operational workflows.",
+      "highlights": [
+        "Designed and developed scalable backend APIs using Node.js & TypeScript supporting billing, payments, and customer operations.",
+        "Integrated Firebase Authentication with role-based access control (RBAC) for secure user authentication workflows.",
+        "Implemented Redis caching to dramatically reduce database query load and achieve sub-10ms response times for frequently requested services.",
+        "Published customer activity streams to Apache Kafka, enabling downstream business analytics and automated behavior tracking.",
+        "Coordinated multi-microservice communication ensuring transactional reliability across payment and customer operations."
+      ],
+      "featured": true
+    }
+  ],
+  "education": [
+    {
+      "institution": "Shri Vishnu Engineering College For Women",
+      "degree": "B.Tech in Information Technology",
+      "period": "2020 – 2024"
+    },
+    {
+      "institution": "Narayana Junior College",
+      "degree": "Intermediate (MPC)",
+      "period": "2018 – 2020"
+    },
+    {
+      "institution": "DAV Public School",
+      "degree": "Secondary School Certificate (SSC)",
+      "period": "2017 – 2018"
+    }
+  ]
+}
