@@ -1721,17 +1721,45 @@ html[data-theme="light"] .promo-track-bg {
 .skill-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.45rem;
 }
 
 .skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  padding: 0.3rem 0.65rem;
+  font-size: 0.8rem;
+  padding: 0.35rem 0.65rem;
   border-radius: var(--radius-sm);
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.skill-pill:hover {
+  border-color: var(--accent-primary);
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.skill-pill i {
+  font-size: 0.95rem;
+  color: var(--accent-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  text-align: center;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.skill-pill:hover i {
+  transform: scale(1.18);
+  color: var(--accent-primary-hover);
 }
 
 /* --------------------------------------------------------------------------
