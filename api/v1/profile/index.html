@@ -1,149 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GET /api/v1/profile &mdash; Keerthana Varanasi</title>
-  <meta name="robots" content="noindex">
-  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
-  <style>
-    :root {
-      --bg: #090b10;
-      --card-bg: #10141d;
-      --border: #1e2638;
-      --text: #e2e8f0;
-      --text-muted: #64748b;
-      --accent: #10b981;
-      --accent-cyan: #38bdf8;
-      --accent-yellow: #fbbf24;
-      --font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--font);
-      font-size: 13.5px;
-      line-height: 1.6;
-      padding: 1.5rem;
-    }
-    .header-bar {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 0.75rem 1.25rem;
-      margin-bottom: 1.25rem;
-    }
-    .meta-left {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-    .method-badge {
-      background: #064e3b;
-      color: #34d399;
-      font-weight: 700;
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
-      font-size: 12px;
-      letter-spacing: 0.05em;
-    }
-    .status-badge {
-      background: rgba(16, 185, 129, 0.15);
-      color: var(--accent);
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-    .url-text {
-      color: var(--accent-cyan);
-      font-weight: 600;
-      word-break: break-all;
-    }
-    .actions {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-    .btn {
-      background: var(--bg);
-      color: var(--text);
-      border: 1px solid var(--border);
-      padding: 0.4rem 0.8rem;
-      border-radius: 6px;
-      font-family: var(--font);
-      font-size: 12px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      transition: all 0.15s ease;
-    }
-    .btn:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-    .btn-primary {
-      background: var(--accent);
-      color: #052e16;
-      border-color: var(--accent);
-      font-weight: 700;
-    }
-    .btn-primary:hover {
-      background: #34d399;
-      color: #052e16;
-    }
-    .json-container {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.5rem;
-      overflow-x: auto;
-    }
-    pre {
-      margin: 0;
-      font-family: var(--font);
-      white-space: pre-wrap;
-      word-break: break-word;
-    }
-    .json-key { color: #7dd3fc; }
-    .json-string { color: #a7f3d0; }
-    .json-number { color: #fde047; }
-    .json-boolean { color: #c084fc; }
-    .json-null { color: #f43f5e; }
-  </style>
-</head>
-<body>
-
-  <div class="header-bar">
-    <div class="meta-left">
-      <span class="method-badge">GET</span>
-      <span class="url-text">/api/v1/profile</span>
-      <span class="status-badge">200 OK</span>
-      <span style="color: var(--text-muted); font-size: 12px;">application/json</span>
-    </div>
-    <div class="actions">
-      <button class="btn" id="copy-btn" type="button">Copy JSON</button>
-      <a href="../profile.json" class="btn" download="profile.json">Download Raw</a>
-      <a href="/" class="btn btn-primary">&larr; Portfolio</a>
-    </div>
-  </div>
-
-  <div class="json-container">
-    <pre id="json-display"><code>Loading...</code></pre>
-  </div>
-
-  <script>
-    const data = {
+<pre>{
   "status": "success",
   "code": 200,
   "endpoint": "/api/v1/profile",
@@ -153,7 +8,7 @@
       "name": "Keerthana Varanasi",
       "title": "Backend Engineer",
       "company": "Dhan AI",
-      "currentRole": "SDE 1 (July 2025 \u2013 Present)",
+      "currentRole": "SDE 1 (July 2025 – Present)",
       "experience": "2+ years",
       "scale": "350,000+ live telecom customers supported",
       "location": "India",
@@ -198,7 +53,7 @@
         "stage": 1,
         "role": "Backend Developer Intern",
         "company": "Dhan AI",
-        "period": "January 2024 \u2013 June 2024",
+        "period": "January 2024 – June 2024",
         "type": "Internship",
         "highlights": [
           "Hands-on backend engineering contributing to real-world customer platforms",
@@ -210,7 +65,7 @@
         "stage": 2,
         "role": "Junior Software Engineer",
         "company": "Dhan AI",
-        "period": "July 2024 \u2013 June 2025",
+        "period": "July 2024 – June 2025",
         "type": "Full-Time",
         "highlights": [
           "Transitioned into full-time engineering owning critical service modules for high-traffic customer platforms",
@@ -223,7 +78,7 @@
         "stage": 3,
         "role": "SDE 1",
         "company": "Dhan AI",
-        "period": "July 2025 \u2013 Present",
+        "period": "July 2025 – Present",
         "type": "Full-Time (Current Role)",
         "highlights": [
           "Developing backend applications and contributing to API enhancements for platforms supporting 350,000+ live residential telecom customers",
@@ -268,41 +123,4 @@
       "documentation": "https://keerthanavaranasi16.github.io/#api-console"
     }
   }
-};
-
-    function highlightJson(json) {
-      if (typeof json !== 'string') {
-        json = JSON.stringify(json, null, 2);
-      }
-      json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-      return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
-        let cls = 'json-number';
-        if (/^"/.test(match)) {
-          if (/:$/.test(match)) {
-            cls = 'json-key';
-          } else {
-            cls = 'json-string';
-          }
-        } else if (/true|false/.test(match)) {
-          cls = 'json-boolean';
-        } else if (/null/.test(match)) {
-          cls = 'json-null';
-        }
-        return '<span class="' + cls + '">' + match + '</span>';
-      });
-    }
-
-    const codeEl = document.getElementById('json-display');
-    codeEl.innerHTML = highlightJson(data);
-
-    const copyBtn = document.getElementById('copy-btn');
-    copyBtn.addEventListener('click', () => {
-      navigator.clipboard.writeText(JSON.stringify(data, null, 2)).then(() => {
-        const orig = copyBtn.textContent;
-        copyBtn.textContent = 'Copied!';
-        setTimeout(() => { copyBtn.textContent = orig; }, 1500);
-      });
-    });
-  </script>
-</body>
-</html>
+}</pre>
