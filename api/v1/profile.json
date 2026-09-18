@@ -95,20 +95,6 @@
         "scale": "350,000+ Live Telecom Customers",
         "stack": ["Node.js", "TypeScript", "GraphQL", "Redis", "Kafka", "Salesforce"],
         "description": "High-scale customer-facing self-service platform designed and maintained for residential telecom subscribers, supporting bill pay, plan changes, and real-time usage tracking."
-      },
-      {
-        "id": "rbac-security-auth",
-        "title": "Enterprise Role-Based Access Control (RBAC) System",
-        "scale": "Multi-Tenant Enterprise Security",
-        "stack": ["Node.js", "Firebase Auth", "PostgreSQL", "REST APIs", "Docker"],
-        "description": "Fine-grained authorization service implementing dynamic role-based access control, token validation, audit logging, and least-privilege permission management."
-      },
-      {
-        "id": "high-throughput-notification-service",
-        "title": "High-Throughput Notification & Broadcast Service",
-        "scale": "100K+ Messages/Minute Event Pipeline",
-        "stack": ["Apache Kafka", "Redis Cache", "Python", "Microservices", "Docker"],
-        "description": "Distributed asynchronous messaging service consuming high-velocity event streams from Kafka to dispatch targeted customer alerts, billing notices, and system alerts."
       }
     ],
     "contact": {

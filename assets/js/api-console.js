@@ -443,7 +443,7 @@
         <pre style="margin: 0; padding: 0.5rem; background: rgba(0,0,0,0.3); border-radius: 4px; overflow-x: auto;"><code>${syntaxHighlightJson(currentLoadedData)}</code></pre>
       `;
     } else if (cmd === 'profile') {
-      outLine.innerHTML = `<span style="color: #38bdf8; font-weight: 600;">Keerthana Varanasi</span> | Backend Engineer at Dhan AI (SDE 1)<br>2+ years developing and maintaining scalable backend services supporting 350K+ live customers using Node.js, TypeScript, GraphQL, Kafka, and Redis. I love Building systems that make sense.`;
+      outLine.innerHTML = `<span style="color: #38bdf8; font-weight: 600;">Keerthana Varanasi</span> | Backend Engineer at Dhan AI (SDE 1)<br>I love Building systems that make sense.`;
     } else if (cmd === 'skills') {
       outLine.innerHTML = `
         <div><strong style="color: var(--accent-primary);">Languages:</strong> TypeScript, JavaScript, Python, Java, Node.js, SQL</div>
