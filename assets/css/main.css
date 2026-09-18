@@ -829,6 +829,29 @@ svg {
   color: var(--text-muted);
 }
 
+.terminal-action-chip {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.38rem 0.8rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.terminal-action-chip:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: var(--bg-card-hover);
+  transform: translateY(-1px);
+}
+
 .api-loading-spinner {
   width: 32px;
   height: 32px;

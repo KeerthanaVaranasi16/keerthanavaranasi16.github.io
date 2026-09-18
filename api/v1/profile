@@ -1,0 +1,126 @@
+{
+  "status": "success",
+  "code": 200,
+  "endpoint": "/api/v1/profile",
+  "timestamp": "2026-09-18T06:30:00.000Z",
+  "data": {
+    "profile": {
+      "name": "Keerthana Varanasi",
+      "title": "Backend Engineer",
+      "company": "Dhan AI",
+      "currentRole": "SDE 1 (July 2025 – Present)",
+      "experience": "2+ years",
+      "scale": "350,000+ live telecom customers supported",
+      "location": "India",
+      "bio": "Software Engineer with 2+ years building high-scale distributed backend applications using Node.js, TypeScript, Python, GraphQL, and REST APIs. Experienced in event-driven streaming with Apache Kafka, sub-10ms in-memory caching with Redis, and enterprise multi-tenant RBAC auth."
+    },
+    "technicalSkills": {
+      "languages": [
+        "Node.js",
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "Java",
+        "SQL"
+      ],
+      "apiAndArchitecture": [
+        "GraphQL",
+        "REST APIs",
+        "Microservices Architecture",
+        "Event-Driven Design",
+        "API Gateway Routing",
+        "High-Concurrency Caching",
+        "Error Analysis & Edge-Case Debugging"
+      ],
+      "databasesAndCache": [
+        "Redis (In-Memory Cache & Session Store)",
+        "PostgreSQL",
+        "MongoDB",
+        "MySQL"
+      ],
+      "integrationsAndEcosystem": [
+        "Apache Kafka",
+        "Salesforce CRM",
+        "Microsoft Dynamics 365",
+        "Firebase Auth (RBAC)",
+        "Docker",
+        "Git",
+        "CI/CD Pipelines"
+      ]
+    },
+    "careerProgression": [
+      {
+        "stage": 1,
+        "role": "Backend Developer Intern",
+        "company": "Dhan AI",
+        "period": "January 2024 – June 2024",
+        "type": "Internship",
+        "highlights": [
+          "Hands-on backend engineering contributing to real-world customer platforms",
+          "Optimized backend performance by analyzing edge-case error scenarios and debugging latency bottlenecks",
+          "Collaborated in agile cross-functional engineering teams following modern Git workflows and automated testing"
+        ]
+      },
+      {
+        "stage": 2,
+        "role": "Junior Software Engineer",
+        "company": "Dhan AI",
+        "period": "July 2024 – June 2025",
+        "type": "Full-Time",
+        "highlights": [
+          "Transitioned into full-time engineering owning critical service modules for high-traffic customer platforms",
+          "Built event-driven background pipelines using Apache Kafka for reliable asynchronous messaging",
+          "Integrated Redis in-memory caching layer achieving sub-10ms response latency for repeated queries",
+          "Engineered enterprise data integrations connecting third-party systems including Salesforce and Microsoft Dynamics 365"
+        ]
+      },
+      {
+        "stage": 3,
+        "role": "SDE 1",
+        "company": "Dhan AI",
+        "period": "July 2025 – Present",
+        "type": "Full-Time (Current Role)",
+        "highlights": [
+          "Developing backend applications and contributing to API enhancements for platforms supporting 350,000+ live residential telecom customers",
+          "Design and maintain high-scale GraphQL and REST APIs with comprehensive validation and error handling",
+          "Architect robust data sync pipelines with third-party enterprise platforms (Salesforce CRM, Dynamics 365)",
+          "Maintain 99.9% platform availability across peak customer billing and usage periods"
+        ]
+      }
+    ],
+    "featuredProjects": [
+      {
+        "id": "customer-self-service-portal",
+        "title": "Customer Self-Service Portal",
+        "scale": "350,000+ Live Telecom Customers",
+        "stack": ["Node.js", "TypeScript", "GraphQL", "Redis", "Kafka", "Salesforce"],
+        "description": "High-scale customer-facing self-service platform designed and maintained for residential telecom subscribers, supporting bill pay, plan changes, and real-time usage tracking."
+      },
+      {
+        "id": "rbac-security-auth",
+        "title": "Enterprise Role-Based Access Control (RBAC) System",
+        "scale": "Multi-Tenant Enterprise Security",
+        "stack": ["Node.js", "Firebase Auth", "PostgreSQL", "REST APIs", "Docker"],
+        "description": "Fine-grained authorization service implementing dynamic role-based access control, token validation, audit logging, and least-privilege permission management."
+      },
+      {
+        "id": "high-throughput-notification-service",
+        "title": "High-Throughput Notification & Broadcast Service",
+        "scale": "100K+ Messages/Minute Event Pipeline",
+        "stack": ["Apache Kafka", "Redis Cache", "Python", "Microservices", "Docker"],
+        "description": "Distributed asynchronous messaging service consuming high-velocity event streams from Kafka to dispatch targeted customer alerts, billing notices, and system alerts."
+      }
+    ],
+    "contact": {
+      "email": "keerthanavaranasi16@gmail.com",
+      "github": "https://github.com/KeerthanaVaranasi16",
+      "linkedin": "https://linkedin.com/in/keerthanavaranasi",
+      "portfolio": "https://keerthanavaranasi16.github.io"
+    },
+    "meta": {
+      "version": "v1.0.0",
+      "format": "REST JSON",
+      "documentation": "https://keerthanavaranasi16.github.io/#api-console"
+    }
+  }
+}
