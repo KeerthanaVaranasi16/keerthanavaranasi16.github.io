@@ -307,32 +307,84 @@
   // Initialize progress bar and active states on load
   selectStage(currentActiveStage);
 
+  const experienceComponent = document.getElementById('dhan-experience-component');
+  const promoRail = document.querySelector('.promo-visual-rail');
+
+  function enterShowAllMode() {
+    if (!detailsViewport) return;
+    detailsViewport.classList.add('show-all');
+    if (experienceComponent) experienceComponent.classList.add('all-phases-mode');
+    if (promoRail) promoRail.classList.add('all-phases-mode');
+    if (viewToggleBtn) viewToggleBtn.classList.add('is-active');
+    if (toggleText) toggleText.textContent = 'Focus Single Phase';
+
+    if (trackFill) {
+      trackFill.style.width = '100%';
+      trackFill.classList.remove('zero-fill');
+    }
+
+    stageTabs.forEach((tab) => {
+      tab.classList.remove('active-stage');
+      tab.classList.add('all-active');
+      tab.setAttribute('aria-selected', 'false');
+      const stageName = tab.querySelector('.stage-title')?.textContent || 'phase';
+      tab.setAttribute('title', `Click to jump to ${stageName}`);
+    });
+  }
+
+  function exitShowAllMode(focusStage) {
+    if (!detailsViewport) return;
+    detailsViewport.classList.remove('show-all');
+    if (experienceComponent) experienceComponent.classList.remove('all-phases-mode');
+    if (promoRail) promoRail.classList.remove('all-phases-mode');
+    if (viewToggleBtn) viewToggleBtn.classList.remove('is-active');
+    if (toggleText) toggleText.textContent = 'Show All Phases';
+
+    stageTabs.forEach((tab) => {
+      tab.classList.remove('all-active');
+    });
+
+    selectStage(focusStage || currentActiveStage || '3');
+  }
+
   // Recalculate on window resize
   window.addEventListener('resize', () => {
-    if (currentActiveStage) {
+    if (detailsViewport && detailsViewport.classList.contains('show-all')) {
+      if (trackFill) trackFill.style.width = '100%';
+    } else if (currentActiveStage) {
       updateProgressTrack(currentActiveStage);
     }
   });
 
   stageTabs.forEach((tab) => {
     tab.addEventListener('click', () => {
-      if (detailsViewport && detailsViewport.classList.contains('show-all')) {
-        detailsViewport.classList.remove('show-all');
-        if (toggleText) toggleText.textContent = 'Show All Phases';
-      }
       const stage = tab.getAttribute('data-stage');
-      selectStage(stage);
+      const isShowAll = detailsViewport && detailsViewport.classList.contains('show-all');
+
+      if (isShowAll) {
+        // Smoothly scroll down to that specific role card in the full view
+        const targetPane = document.getElementById(`stage-pane-${stage}`);
+        if (targetPane) {
+          targetPane.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          targetPane.classList.remove('pane-spotlight');
+          void targetPane.offsetWidth; // trigger reflow
+          targetPane.classList.add('pane-spotlight');
+          setTimeout(() => targetPane.classList.remove('pane-spotlight'), 1600);
+        }
+        currentActiveStage = stage;
+      } else {
+        selectStage(stage);
+      }
     });
   });
 
   if (viewToggleBtn && detailsViewport) {
     viewToggleBtn.addEventListener('click', () => {
-      const isShowAll = detailsViewport.classList.toggle('show-all');
-      if (toggleText) {
-        toggleText.textContent = isShowAll ? 'Focus Active Phase' : 'Show All Phases';
-      }
-      if (!isShowAll) {
-        selectStage('3'); // reset to SDE 1 active on collapse
+      const isShowAll = detailsViewport.classList.contains('show-all');
+      if (isShowAll) {
+        exitShowAllMode(currentActiveStage || '3');
+      } else {
+        enterShowAllMode();
       }
     });
   }
@@ -340,9 +392,6 @@
   // --------------------------------------------------------------------------
   // INTERACTIVE STAGES SCROLL HINT (MICRO-PULSE ON FIRST SCROLL)
   // --------------------------------------------------------------------------
-  const experienceComponent = document.getElementById('dhan-experience-component');
-  const promoRail = document.querySelector('.promo-visual-rail');
-
   if (experienceComponent && promoRail && 'IntersectionObserver' in window) {
     const scrollObserver = new IntersectionObserver(
       (entries) => {

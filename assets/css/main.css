@@ -1527,6 +1527,90 @@ html[data-theme="light"] .promo-stage-col:hover {
   background: rgba(15, 23, 42, 0.02);
 }
 
+/* All-Phases Mode - Cue Styling */
+.stage-action-cue .cue-all {
+  display: none;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--accent-secondary);
+  background: var(--accent-secondary-dim);
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  padding: 0.22rem 0.65rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.02em;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.15);
+  transition: all var(--transition-fast);
+}
+
+/* When In All-Phases Mode: Reveal All Markers Harmoniously */
+.all-phases-mode .stage-action-cue .cue-active,
+.all-phases-mode .stage-action-cue .cue-hover {
+  display: none !important;
+}
+
+.all-phases-mode .stage-action-cue .cue-all {
+  display: inline-flex !important;
+}
+
+.all-phases-mode .promo-stage-col:hover .stage-action-cue .cue-all {
+  color: #fff;
+  background: var(--accent-secondary);
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 14px rgba(6, 182, 212, 0.45);
+  transform: translateY(-1px);
+}
+
+.all-phases-mode .promo-track-fill {
+  width: 100% !important;
+  background: linear-gradient(90deg, #06b6d4 0%, #10b981 100%) !important;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.5) !important;
+}
+
+.all-phases-mode .promo-marker-node {
+  border-color: var(--accent-primary) !important;
+  color: var(--accent-primary) !important;
+  background: #11231f !important;
+  box-shadow: 0 0 0 6px #121721 !important;
+}
+
+html[data-theme="light"] .all-phases-mode .promo-marker-node {
+  background: #ecfdf5 !important;
+  box-shadow: 0 0 0 6px #f8fafc !important;
+}
+
+.all-phases-mode .stage-3 .promo-marker-node {
+  background: var(--accent-primary) !important;
+  color: #090b10 !important;
+  box-shadow: 0 0 0 6px #121721, 0 0 18px rgba(16, 185, 129, 0.5) !important;
+}
+
+.promo-view-toggle-btn.is-active {
+  background: var(--accent-primary-dim);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.25);
+}
+
+@keyframes paneSpotlightFlash {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+  30% {
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.45), 0 0 24px rgba(16, 185, 129, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.promo-stage-pane.pane-spotlight {
+  animation: paneSpotlightFlash 1.6s ease-out;
+  border-radius: var(--radius-md);
+}
+
 /* Scroll-triggered Sequential Attention Pulse */
 @keyframes stageNodeAttentionPulse {
   0% {
