@@ -254,7 +254,6 @@
         <div class="api-headers-preview">
           <div><span class="api-header-key">Host:</span> keerthanavaranasi16.github.io</div>
           <div><span class="api-header-key">Accept:</span> application/json</div>
-          <div><span class="api-header-key">Status:</span> 200 Live REST Endpoint</div>
         </div>
         <div class="api-request-action-box">
           <button type="button" class="api-send-btn" id="api-card-send-btn">
@@ -263,7 +262,6 @@
             </svg>
             <span>Send Request</span>
           </button>
-          <div class="api-send-hint">Query live endpoint or test in Postman / Browser</div>
         </div>
 
         <!-- Quick Access Actions for Postman & Browsers -->

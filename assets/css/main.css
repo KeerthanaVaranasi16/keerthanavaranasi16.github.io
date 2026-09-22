@@ -1227,7 +1227,7 @@ html[data-theme="light"] .cli-history strong {
 /* Continuous Horizontal Progress Bar Track (Node 1 center to Node 3 center) */
 .promo-track-bg {
   position: absolute;
-  top: 28px;
+  top: 29px;
   left: calc(100% / 6);
   right: calc(100% / 6);
   height: 6px;
@@ -1298,8 +1298,8 @@ html[data-theme="light"] .promo-track-bg {
 }
 
 .promo-marker-node {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: var(--bg-surface);
   border: 3px solid var(--border-card);
@@ -1310,8 +1310,27 @@ html[data-theme="light"] .promo-track-bg {
   font-size: 0.88rem;
   font-weight: 800;
   color: var(--text-muted);
-  box-shadow: 0 0 0 5px var(--bg-card);
+  box-shadow: 0 0 0 6px #121721;
+  position: relative;
+  z-index: 5;
   transition: all var(--transition-fast);
+}
+
+html[data-theme="light"] .promo-marker-node {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 0 0 6px #f8fafc;
+}
+
+.promo-marker-node i,
+.promo-marker-node svg {
+  font-size: 1.2rem;
+  width: 19px;
+  height: 19px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .promo-stage-col:hover .promo-marker-node {
@@ -1324,12 +1343,25 @@ html[data-theme="light"] .promo-track-bg {
 .promo-stage-col.completed-stage .promo-marker-node {
   border-color: var(--accent-primary);
   color: var(--accent-primary);
-  background: var(--accent-primary-dim);
+  background: #11231f; /* Solid dark emerald background prevents progress line from cutting through */
+  box-shadow: 0 0 0 6px #121721;
+}
+
+html[data-theme="light"] .promo-stage-col.completed-stage .promo-marker-node {
+  background: #ecfdf5;
+  box-shadow: 0 0 0 6px #f8fafc;
 }
 
 .promo-stage-col.completed-stage:hover .promo-marker-node {
   background: var(--accent-primary);
   color: #090b10;
+  box-shadow: 0 0 0 6px #121721, 0 0 16px rgba(16, 185, 129, 0.4);
+}
+
+html[data-theme="light"] .promo-stage-col.completed-stage:hover .promo-marker-node {
+  background: var(--accent-primary);
+  color: #ffffff;
+  box-shadow: 0 0 0 6px #f8fafc, 0 0 16px rgba(16, 185, 129, 0.4);
 }
 
 /* Active Stage */
@@ -1337,7 +1369,11 @@ html[data-theme="light"] .promo-track-bg {
   border-color: var(--accent-primary);
   background: var(--accent-primary);
   color: #090b10;
-  box-shadow: 0 0 0 5px var(--bg-card), 0 0 20px rgba(16, 185, 129, 0.6);
+  box-shadow: 0 0 0 6px #121721, 0 0 20px rgba(16, 185, 129, 0.6);
+}
+
+html[data-theme="light"] .promo-stage-col.active-stage .promo-marker-node {
+  box-shadow: 0 0 0 6px #f8fafc, 0 0 20px rgba(16, 185, 129, 0.6);
 }
 
 .promo-stage-col.active-stage .promo-stage-details .stage-title {
