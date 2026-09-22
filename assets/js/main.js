@@ -347,6 +347,69 @@
     selectStage(focusStage || currentActiveStage || '3');
   }
 
+  // --------------------------------------------------------------------------
+  // DYNAMIC CAREER PROGRESSION SWEEP (PROGRESS BAR GLIDES START TO END)
+  // --------------------------------------------------------------------------
+  let hasSweptThisSession = false;
+
+  function playProgressionSweep() {
+    if (!trackFill) return;
+    if (detailsViewport && detailsViewport.classList.contains('show-all')) return;
+
+    const isMobile = window.innerWidth <= 920;
+
+    // 1. Reset bar to start (0%) without animation
+    trackFill.style.transition = 'none';
+    if (isMobile) {
+      trackFill.style.width = '100%';
+      trackFill.style.height = '0%';
+    } else {
+      trackFill.style.height = '100%';
+      trackFill.style.width = '0%';
+    }
+    trackFill.classList.add('zero-fill');
+
+    // Force browser reflow so 0% position is registered
+    void trackFill.offsetWidth;
+
+    // 2. Smoothly sweep progress bar from start to end (0% -> 100%)
+    requestAnimationFrame(() => {
+      trackFill.style.transition = 'width 1.35s cubic-bezier(0.22, 1, 0.36, 1), height 1.35s cubic-bezier(0.22, 1, 0.36, 1)';
+      if (isMobile) {
+        trackFill.style.height = '100%';
+      } else {
+        trackFill.style.width = '100%';
+      }
+      trackFill.classList.remove('zero-fill');
+
+      // 3. Restore default snappy transition after sweep finishes
+      setTimeout(() => {
+        if (trackFill) trackFill.style.transition = '';
+      }, 1450);
+    });
+  }
+
+  // Reset sweep trigger when user scrolls back to the top (Hero / About)
+  window.addEventListener('scroll', () => {
+    if (window.scrollY < 200) {
+      hasSweptThisSession = false;
+    }
+  }, { passive: true });
+
+  // When clicking Experience navbar link from above
+  const expNavLink = document.querySelector('a[href="#experience"]');
+  if (expNavLink) {
+    expNavLink.addEventListener('click', () => {
+      hasSweptThisSession = false;
+      setTimeout(() => {
+        if (!hasSweptThisSession) {
+          hasSweptThisSession = true;
+          playProgressionSweep();
+        }
+      }, 400);
+    });
+  }
+
   // Recalculate on window resize
   window.addEventListener('resize', () => {
     if (detailsViewport && detailsViewport.classList.contains('show-all')) {
@@ -402,6 +465,12 @@
             setTimeout(() => {
               promoRail.classList.remove('attention-pulse');
             }, 2500);
+
+            // Also trigger the start-to-end progression sweep if entering from top
+            if (!hasSweptThisSession) {
+              hasSweptThisSession = true;
+              playProgressionSweep();
+            }
           }
         });
       },
