@@ -1430,6 +1430,159 @@ html[data-theme="light"] .promo-stage-col.active-stage .promo-marker-node {
 }
 
 /* --------------------------------------------------------------------------
+   INTERACTIVE STAGE AFFORDANCES & ACTIVE INDICATORS
+   -------------------------------------------------------------------------- */
+.stage-action-cue {
+  margin-top: 0.65rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 26px;
+}
+
+.stage-action-cue .cue-active {
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--accent-primary);
+  background: var(--accent-primary-dim);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  padding: 0.22rem 0.7rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.02em;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.2);
+  transition: all var(--transition-fast);
+}
+
+.promo-stage-col.active-stage .stage-action-cue .cue-active {
+  display: inline-flex;
+}
+
+.stage-action-cue .cue-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  box-shadow: 0 0 8px var(--accent-primary);
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.55;
+  }
+}
+
+.stage-action-cue .cue-hover {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  padding: 0.22rem 0.65rem;
+  border-radius: var(--radius-full);
+  opacity: 0.75;
+  transition: all var(--transition-fast);
+}
+
+html[data-theme="light"] .stage-action-cue .cue-hover {
+  background: rgba(15, 23, 42, 0.04);
+}
+
+.promo-stage-col.active-stage .stage-action-cue .cue-hover {
+  display: none;
+}
+
+.promo-stage-col:not(.active-stage):hover .stage-action-cue .cue-hover {
+  opacity: 1;
+  color: var(--accent-primary);
+  border-color: rgba(16, 185, 129, 0.4);
+  background: var(--accent-primary-dim);
+  transform: translateY(-1px);
+}
+
+/* Subtle Hover Feedback on Stage Column */
+.promo-stage-col {
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md);
+}
+
+.promo-stage-col:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+html[data-theme="light"] .promo-stage-col:hover {
+  background: rgba(15, 23, 42, 0.02);
+}
+
+/* Scroll-triggered Sequential Attention Pulse */
+@keyframes stageNodeAttentionPulse {
+  0% {
+    box-shadow: 0 0 0 6px #121721;
+    transform: scale(1);
+  }
+  35% {
+    box-shadow: 0 0 0 9px #121721, 0 0 20px rgba(16, 185, 129, 0.7);
+    transform: scale(1.1);
+  }
+  70% {
+    box-shadow: 0 0 0 6px #121721, 0 0 12px rgba(16, 185, 129, 0.35);
+    transform: scale(1.03);
+  }
+  100% {
+    box-shadow: 0 0 0 6px #121721;
+    transform: scale(1);
+  }
+}
+
+html[data-theme="light"] .promo-visual-rail.attention-pulse .promo-marker-node {
+  animation-name: stageNodeAttentionPulseLight;
+}
+
+@keyframes stageNodeAttentionPulseLight {
+  0% {
+    box-shadow: 0 0 0 6px #f8fafc;
+    transform: scale(1);
+  }
+  35% {
+    box-shadow: 0 0 0 9px #f8fafc, 0 0 20px rgba(16, 185, 129, 0.7);
+    transform: scale(1.1);
+  }
+  70% {
+    box-shadow: 0 0 0 6px #f8fafc, 0 0 12px rgba(16, 185, 129, 0.35);
+    transform: scale(1.03);
+  }
+  100% {
+    box-shadow: 0 0 0 6px #f8fafc;
+    transform: scale(1);
+  }
+}
+
+.promo-visual-rail.attention-pulse .stage-1 .promo-marker-node {
+  animation: stageNodeAttentionPulse 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.15s 1;
+}
+
+.promo-visual-rail.attention-pulse .stage-2 .promo-marker-node {
+  animation: stageNodeAttentionPulse 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.45s 1;
+}
+
+.promo-visual-rail.attention-pulse .stage-3 .promo-marker-node {
+  animation: stageNodeAttentionPulse 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.75s 1;
+}
+
+/* --------------------------------------------------------------------------
    ENHANCED STAGE DETAILS VIEWPORT
    -------------------------------------------------------------------------- */
 .promo-details-viewport {

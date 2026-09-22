@@ -293,6 +293,7 @@
       tab.classList.toggle('active-stage', isSelected);
       tab.classList.toggle('completed-stage', isCompleted);
       tab.setAttribute('aria-selected', isSelected);
+      tab.setAttribute('title', isSelected ? `Currently viewing ${tab.querySelector('.stage-title')?.textContent || 'stage'} details` : `Click to view ${tab.querySelector('.stage-title')?.textContent || 'stage'} details`);
     });
 
     stagePanes.forEach((pane) => {
@@ -334,5 +335,29 @@
         selectStage('3'); // reset to SDE 1 active on collapse
       }
     });
+  }
+
+  // --------------------------------------------------------------------------
+  // INTERACTIVE STAGES SCROLL HINT (MICRO-PULSE ON FIRST SCROLL)
+  // --------------------------------------------------------------------------
+  const experienceComponent = document.getElementById('dhan-experience-component');
+  const promoRail = document.querySelector('.promo-visual-rail');
+
+  if (experienceComponent && promoRail && 'IntersectionObserver' in window) {
+    const scrollObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            promoRail.classList.add('attention-pulse');
+            scrollObserver.unobserve(entry.target);
+            setTimeout(() => {
+              promoRail.classList.remove('attention-pulse');
+            }, 2500);
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
+    scrollObserver.observe(experienceComponent);
   }
 })();
