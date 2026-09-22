@@ -1314,6 +1314,11 @@ html[data-theme="light"] .promo-track-bg {
   transition: all var(--transition-fast);
 }
 
+.promo-marker-node i {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
 .promo-stage-col:hover .promo-marker-node {
   transform: scale(1.1);
   border-color: var(--accent-primary);
