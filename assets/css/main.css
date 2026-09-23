@@ -2509,6 +2509,19 @@ html[data-theme="light"] .promo-visual-rail.attention-pulse .promo-marker-node {
     align-items: stretch;
   }
 
+  .metrics-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .metric-card {
+    padding: 0.95rem 0.8rem;
+  }
+
+  .metric-number {
+    font-size: 1.45rem;
+  }
+
   .btn {
     width: 100%;
   }

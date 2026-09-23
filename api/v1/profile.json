@@ -10,6 +10,7 @@
       "company": "Dhan AI",
       "currentRole": "Software Development Engineer - 1 (July 2025 – Present)",
       "experience": "2+ years",
+      "microservices": "8+ worked",
       "scale": "350,000+ live telecom customers supported",
       "location": "India",
       "bio": "Software Engineer with 2+ years building high-scale distributed backend applications using Node.js, TypeScript, Python, GraphQL, and REST APIs. Experienced in event-driven streaming with Apache Kafka, sub-10ms in-memory caching with Redis, and enterprise multi-tenant RBAC auth."

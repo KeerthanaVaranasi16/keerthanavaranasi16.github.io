@@ -13,6 +13,7 @@ Software Engineer with **2+ years of experience** developing and maintaining hig
 At **Dhan AI**, Keerthana builds scalable platforms supporting **350,000+ live customers and telecom operations**, integrating event-driven systems using **Apache Kafka**, enterprise CRMs (**Salesforce**, **Dynamics 365**), and low-latency in-memory caching with **Redis**.
 
 - 💼 **Current Role:** Software Development Engineer - 1 at Dhan AI
+- 🧩 **Architecture:** 8+ Microservices worked across distributed systems
 - 🎓 **Education:** B.Tech in Information Technology — Shri Vishnu Engineering College For Women (2020 – 2024)
 - 📍 **Location:** Hyderabad, India
 
