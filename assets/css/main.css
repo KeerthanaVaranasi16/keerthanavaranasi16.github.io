@@ -463,6 +463,7 @@ svg {
   transition: color var(--transition-fast);
 }
 
+.metric-card:hover .metric-number,
 .metric-card:hover .metric-val {
   color: var(--accent-primary);
 }
