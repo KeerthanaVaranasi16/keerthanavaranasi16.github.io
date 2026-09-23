@@ -10,6 +10,7 @@
     "specialization": "Distributed backend architectures, GraphQL & REST API design, Redis caching, event-driven messaging with Kafka, and enterprise integrations (Salesforce CRM, Dynamics 365, Firebase Auth).",
     "metrics": {
       "experienceYears": "2+",
+      "microservicesWorked": "8+",
       "liveCustomersSupported": "350K+",
       "primaryStack": "Node.js, TypeScript, Python, GraphQL, Kafka, Redis"
     }
