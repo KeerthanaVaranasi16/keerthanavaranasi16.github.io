@@ -18,7 +18,7 @@
         "name": "Keerthana Varanasi",
         "title": "Backend Engineer",
         "company": "Dhan AI",
-        "currentRole": "SDE 1 (July 2025 – Present)",
+        "currentRole": "Software Development Engineer - 1 (July 2025 – Present)",
         "experience": "2+ years",
         "scale": "350,000+ live telecom customers supported",
         "location": "India",
@@ -86,7 +86,7 @@
         },
         {
           "stage": 3,
-          "role": "SDE 1",
+          "role": "Software Development Engineer - 1",
           "company": "Dhan AI",
           "period": "July 2025 – Present",
           "type": "Full-Time (Current Role)",
@@ -429,7 +429,7 @@
           <div><strong style="color: var(--accent-primary);">profile</strong>             - Overview of Keerthana's background & role</div>
           <div><strong style="color: var(--accent-primary);">skills</strong>              - List languages, databases, APIs & tools</div>
           <div><strong style="color: var(--accent-primary);">projects</strong>            - High-scale platforms & architectural details</div>
-          <div><strong style="color: var(--accent-primary);">experience</strong>          - Career journey at Dhan AI (SDE 1)</div>
+          <div><strong style="color: var(--accent-primary);">experience</strong>          - Career journey at Dhan AI (Software Development Engineer - 1)</div>
           <div><strong style="color: var(--accent-primary);">contact</strong>             - Email, GitHub, and LinkedIn</div>
           <div><strong style="color: var(--accent-primary);">clear</strong>               - Clear terminal output</div>
         </div>
@@ -441,7 +441,7 @@
         <pre style="margin: 0; padding: 0.5rem; background: rgba(0,0,0,0.3); border-radius: 4px; overflow-x: auto;"><code>${syntaxHighlightJson(currentLoadedData)}</code></pre>
       `;
     } else if (cmd === 'profile') {
-      outLine.innerHTML = `<span style="color: #38bdf8; font-weight: 600;">Keerthana Varanasi</span> | Backend Engineer at Dhan AI (SDE 1)<br>I love Building systems that make sense.`;
+      outLine.innerHTML = `<span style="color: #38bdf8; font-weight: 600;">Keerthana Varanasi</span> | Backend Engineer at Dhan AI (Software Development Engineer - 1)<br>I love Building systems that make sense.`;
     } else if (cmd === 'skills') {
       outLine.innerHTML = `
         <div><strong style="color: var(--accent-primary);">Languages:</strong> TypeScript, JavaScript, Python, Java, Node.js, SQL</div>
@@ -458,7 +458,7 @@
       `;
     } else if (cmd === 'experience') {
       outLine.innerHTML = `
-        • <strong>SDE 1 @ Dhan AI</strong> (July 2025 – Present)<br>
+        • <strong>Software Development Engineer - 1 @ Dhan AI</strong> (July 2025 – Present)<br>
         • <strong>Junior Software Engineer @ Dhan AI</strong> (July 2024 – June 2025)<br>
         • <strong>Backend Developer Intern @ Dhan AI</strong> (January 2024 – June 2024)
       `;
