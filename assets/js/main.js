@@ -478,4 +478,95 @@
     );
     scrollObserver.observe(experienceComponent);
   }
+
+  // --------------------------------------------------------------------------
+  // METRICS COUNTER ANIMATION
+  // --------------------------------------------------------------------------
+  const metricsStrip = document.getElementById('hero-metrics') || document.querySelector('.metrics-strip');
+  const metricValues = document.querySelectorAll('.metric-val[data-target]');
+
+  if (metricsStrip && metricValues.length > 0) {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function easeOutCubic(t) {
+      return 1 - Math.pow(1 - t, 3);
+    }
+
+    function animateSingleCounter(valEl, duration = 1400) {
+      const target = parseInt(valEl.getAttribute('data-target'), 10);
+      if (isNaN(target)) return;
+
+      const startTime = performance.now();
+
+      function step(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = easeOutCubic(progress);
+        const current = Math.round(eased * target);
+
+        valEl.textContent = current;
+
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          valEl.textContent = target;
+        }
+      }
+
+      valEl.textContent = '0';
+      requestAnimationFrame(step);
+    }
+
+    function animateAllCounters() {
+      if (prefersReducedMotion) {
+        metricValues.forEach((valEl) => {
+          valEl.textContent = valEl.getAttribute('data-target');
+        });
+        return;
+      }
+
+      metricValues.forEach((valEl, idx) => {
+        // Slightly stagger each counter by 80ms for an ultra-slick domino roll effect
+        setTimeout(() => {
+          animateSingleCounter(valEl, 1200);
+        }, idx * 80);
+      });
+    }
+
+    // Trigger on scroll/visibility via IntersectionObserver
+    if ('IntersectionObserver' in window) {
+      let hasAnimated = false;
+      const metricsObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !hasAnimated) {
+              hasAnimated = true;
+              metricsObserver.unobserve(entry.target);
+              setTimeout(animateAllCounters, 150);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      metricsObserver.observe(metricsStrip);
+    } else {
+      setTimeout(animateAllCounters, 300);
+    }
+
+    // Micro-interaction: hovering over a metric card replays a quick 650ms count-up
+    const metricCards = metricsStrip.querySelectorAll('.metric-card');
+    metricCards.forEach((card) => {
+      card.addEventListener('mouseenter', () => {
+        if (prefersReducedMotion) return;
+        const valEl = card.querySelector('.metric-val[data-target]');
+        if (!valEl || card.dataset.animating === 'true') return;
+
+        card.dataset.animating = 'true';
+        animateSingleCounter(valEl, 650);
+        setTimeout(() => {
+          card.dataset.animating = 'false';
+        }, 700);
+      });
+    });
+  }
 })();
