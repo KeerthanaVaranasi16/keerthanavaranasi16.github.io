@@ -33,44 +33,86 @@
   <meta name="twitter:description"
     content="Software Engineer with 2+ years building scalable distributed backends, GraphQL/REST APIs, event-driven pipelines with Kafka, and Redis caching supporting 350K+ customers at Dhan AI.">
 
-  <!-- Structured Data: Person & WebSite -->
+  <!-- Structured Data: Modern AEO & SEO Graph (WebSite, ProfilePage & Person) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Keerthana Varanasi",
-    "jobTitle": "Backend Engineer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Dhan AI"
-    },
-    "email": "mailto:keerthanavaranasi16@gmail.com",
-    "url": "https://keerthanavaranasi16.github.io/",
-    "sameAs": [
-      "https://github.com/KeerthanaVaranasi16",
-      "https://linkedin.com/in/keerthanavaranasi"
-    ],
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "Shri Vishnu Engineering College For Women"
-    },
-    "knowsAbout": [
-      "Node.js",
-      "TypeScript",
-      "JavaScript",
-      "Python",
-      "Java",
-      "GraphQL",
-      "REST APIs",
-      "Microservices",
-      "Apache Kafka",
-      "Redis",
-      "PostgreSQL",
-      "MongoDB",
-      "MySQL",
-      "Salesforce CRM",
-      "Microsoft Dynamics 365",
-      "Firebase Auth"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://keerthanavaranasi16.github.io/#website",
+        "url": "https://keerthanavaranasi16.github.io/",
+        "name": "Keerthana Varanasi — Software Development Engineer - 1 Portfolio",
+        "description": "Official engineering portfolio of Keerthana Varanasi, Software Development Engineer - 1 specializing in high-throughput backend microservices, Kafka, Redis, and distributed systems.",
+        "inLanguage": "en-US",
+        "publisher": {
+          "@id": "https://keerthanavaranasi16.github.io/#person"
+        }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://keerthanavaranasi16.github.io/#webpage",
+        "url": "https://keerthanavaranasi16.github.io/",
+        "name": "Keerthana Varanasi — Software Development Engineer - 1",
+        "isPartOf": {
+          "@id": "https://keerthanavaranasi16.github.io/#website"
+        },
+        "about": {
+          "@id": "https://keerthanavaranasi16.github.io/#person"
+        },
+        "mainEntity": {
+          "@id": "https://keerthanavaranasi16.github.io/#person"
+        },
+        "dateModified": "2026-09-25"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://keerthanavaranasi16.github.io/#person",
+        "name": "Keerthana Varanasi",
+        "jobTitle": "Software Development Engineer - 1",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Dhan AI"
+        },
+        "description": "Software Development Engineer - 1 with 2+ years of experience engineering high-scale distributed backends, 8+ microservices, event-driven pipelines with Apache Kafka, and Redis caching supporting 350K+ live customers with sub-50ms latency.",
+        "email": "mailto:keerthanavaranasi16@gmail.com",
+        "url": "https://keerthanavaranasi16.github.io/",
+        "image": "https://keerthanavaranasi16.github.io/assets/img/profile.jpeg",
+        "sameAs": [
+          "https://github.com/KeerthanaVaranasi16",
+          "https://linkedin.com/in/keerthanavaranasi"
+        ],
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Shri Vishnu Engineering College For Women"
+        },
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "Software Development Engineer - 1",
+          "occupationalCategory": "15-1252.00",
+          "skills": "Distributed Systems, Microservices, Apache Kafka, Redis, Node.js, TypeScript, Java, Spring Boot, GraphQL, High-Throughput APIs"
+        },
+        "knowsAbout": [
+          "Microservices",
+          "Apache Kafka",
+          "Redis In-Memory Caching",
+          "Node.js",
+          "TypeScript",
+          "JavaScript",
+          "Python",
+          "Java",
+          "GraphQL APIs",
+          "REST APIs",
+          "PostgreSQL",
+          "MongoDB",
+          "MySQL",
+          "Distributed Systems",
+          "Event-Driven Architecture",
+          "Salesforce CRM Integration",
+          "Microsoft Dynamics 365",
+          "Firebase Auth"
+        ]
+      }
     ]
   }
   </script>
