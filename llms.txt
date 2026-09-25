@@ -1,0 +1,37 @@
+# Keerthana Varanasi
+
+> Software Development Engineer - 1 specializing in high-throughput backend microservices, event-driven streaming with Apache Kafka, and Redis in-memory caching.
+
+## Professional Summary
+Keerthana Varanasi is a Software Development Engineer - 1 at Dhan AI with 2+ years of hands-on experience engineering scalable, distributed backends. She specializes in building event-driven microservices, high-performance REST and GraphQL APIs, and sub-50ms caching architectures supporting 350,000+ live enterprise customers.
+
+## Key Facts & Metrics
+- **Current Title**: Software Development Engineer - 1
+- **Company**: Dhan AI (July 2025 – Present)
+- **Previous Role**: Software Engineer Intern at Dhan AI (June 2024 – June 2025)
+- **Domain**: Backend Engineering, Distributed Systems, Microservices
+- **Microservices Built & Maintained**: 8+ production microservices
+- **Scale**: 350,000+ live telecom and enterprise customers supported
+- **Latency Benchmark**: Sub-50ms response times achieved via Redis caching and optimized queries
+- **Education**: B.Tech in Information Technology from Shri Vishnu Engineering College For Women (2020 – 2024)
+- **Location**: Hyderabad, Telangana, India
+
+## Core Technical Competencies
+- **Languages**: Node.js, TypeScript, JavaScript, Python, Java, SQL
+- **Architecture & APIs**: Microservices, Event-Driven Architecture, REST APIs, GraphQL, RBAC Authentication
+- **Data & Messaging**: Apache Kafka, Redis (In-Memory Caching, Pub/Sub), PostgreSQL, MongoDB, MySQL
+- **Enterprise Integrations**: Salesforce CRM, Microsoft Dynamics 365, Firebase Auth
+- **DevOps & Tooling**: Docker, Git, GitHub Actions, Postman, Jest, Linux
+
+## Key Production Impact at Dhan AI
+- **Scalable Microservices**: Engineered 8+ resilient microservices serving critical telecom and enterprise workflows.
+- **Event-Driven Streaming**: Designed and deployed Apache Kafka event pipelines ensuring zero message loss and real-time synchronization.
+- **Low-Latency Caching**: Implemented multi-layered Redis caching strategies reducing database query volume and keeping P95 latency under 50ms.
+- **Enterprise CRM Integration**: Built custom connectors and webhook listeners for Salesforce CRM and Microsoft Dynamics 365.
+
+## Official Links & Profiles
+- **Canonical Website**: https://keerthanavaranasi16.github.io/
+- **GitHub**: https://github.com/KeerthanaVaranasi16
+- **LinkedIn**: https://linkedin.com/in/keerthanavaranasi
+- **Machine-Readable API**: https://keerthanavaranasi16.github.io/api/v1/profile
+- **Email**: keerthanavaranasi16@gmail.com
