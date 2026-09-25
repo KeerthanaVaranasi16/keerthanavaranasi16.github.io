@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Customer Self-Service Portal",
+    "description": "High-scale backend platform supporting 350,000+ live residential telecom customers with real-time billing, plan upgrades, payments, and account operations.",
+    "tech": ["Node.js", "TypeScript", "GraphQL", "Redis", "Kafka", "Salesforce"],
+    "architecture": "Event-driven microservices architecture with Redis sub-10ms caching, Kafka message streams, and Salesforce CRM data synchronization",
+    "github": null,
+    "scale": "350,000+ Active Subscribers",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Enterprise Multi-Tenant RBAC System",
+    "description": "Fine-grained authorization and access control service implementing dynamic role-based permissions, JWT token verification, and tenant isolation across corporate internal tooling.",
+    "tech": ["Node.js", "TypeScript", "PostgreSQL", "Firebase Auth", "REST APIs"],
+    "architecture": "Multi-tenant authorization layer with hierarchical role permission caching and secure audit logging",
+    "github": null,
+    "scale": "Enterprise Internal Tooling",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Event-Driven Asynchronous Data Pipeline",
+    "description": "Distributed background processing pipeline utilizing Apache Kafka for reliable asynchronous messaging, webhook processing, and enterprise CRM sync with Microsoft Dynamics 365.",
+    "tech": ["Apache Kafka", "Node.js", "TypeScript", "Redis", "Dynamics 365"],
+    "architecture": "Pub/Sub message queues with automated dead-letter queues, idempotent retry policies, and zero-downtime message consumption",
+    "github": null,
+    "scale": "Sub-10ms In-Memory Caching",
+    "featured": true
+  }
+]

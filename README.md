@@ -39,7 +39,7 @@ At **Dhan AI**, Keerthana builds scalable platforms supporting **350,000+ live c
 
 - **Core:** HTML5, Modern CSS (Custom Properties, Glassmorphism, CSS Grid & Flexbox), Vanilla JavaScript (ES6+)
 - **Typography:** Plus Jakarta Sans & JetBrains Mono (Google Fonts)
-- **Deployment:** GitHub Pages / Static Hosting
+- **Deployment:** GitHub Pages / Static Hosting (.nojekyll enabled)
 
 ---
 
