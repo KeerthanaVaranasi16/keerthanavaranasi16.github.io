@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "text": "Building systems that make sense.",
+    "category": "Core Motto"
+  },
+  {
+    "id": 2,
+    "text": "Scalability is not an afterthought; it is designed into every endpoint, data schema, and cache key from day one.",
+    "category": "Backend Engineering"
+  },
+  {
+    "id": 3,
+    "text": "Sub-10ms response times come from clean event-driven pipelines, deliberate indexing, and aggressive caching.",
+    "category": "Performance"
+  },
+  {
+    "id": 4,
+    "text": "Clean APIs turn complex distributed architectures into intuitive building blocks.",
+    "category": "API Design"
+  }
+]
