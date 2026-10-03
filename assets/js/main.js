@@ -569,4 +569,149 @@
       });
     });
   }
+
+  // --------------------------------------------------------------------------
+  // HERO SECTION FLOATING NODES CONSTELLATION ANIMATION
+  // --------------------------------------------------------------------------
+  function initHeroParticles() {
+    const canvas = document.getElementById('hero-particle-canvas');
+    const heroSection = document.getElementById('hero');
+    if (!canvas || !heroSection) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    const ctx = canvas.getContext('2d');
+    let width = (canvas.width = heroSection.offsetWidth);
+    let height = (canvas.height = heroSection.offsetHeight);
+    let particles = [];
+    let isVisible = true;
+    let mouse = { x: -999, y: -999, radius: 140 };
+
+    function getThemeColors() {
+      const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+      return {
+        // Emerald green for nodes, Electric cyan for constellation links
+        nodeRgb: isDark ? '16, 185, 129' : '5, 150, 105',
+        lineRgb: isDark ? '6, 182, 212' : '2, 132, 199'
+      };
+    }
+
+    let colors = getThemeColors();
+
+    const themeObserver = new MutationObserver(() => {
+      colors = getThemeColors();
+    });
+    themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+    function initParticles() {
+      particles = [];
+      const count = Math.min(Math.floor((width * height) / 16000), 55);
+      for (let i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.45,
+          vy: (Math.random() - 0.5) * 0.45,
+          radius: Math.random() * 1.8 + 0.8,
+          alpha: Math.random() * 0.4 + 0.25
+        });
+      }
+    }
+
+    initParticles();
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        if (!canvas || !heroSection) return;
+        width = canvas.width = heroSection.offsetWidth;
+        height = canvas.height = heroSection.offsetHeight;
+        initParticles();
+      }, 150);
+    });
+
+    heroSection.addEventListener('mousemove', (e) => {
+      const rect = heroSection.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    });
+
+    heroSection.addEventListener('mouseleave', () => {
+      mouse.x = -999;
+      mouse.y = -999;
+    });
+
+    function draw() {
+      if (!isVisible) return;
+      ctx.clearRect(0, 0, width, height);
+
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0) p.x = width;
+        else if (p.x > width) p.x = 0;
+        if (p.y < 0) p.y = height;
+        else if (p.y > height) p.y = 0;
+
+        // Subtle cursor repulsion
+        const dx = p.x - mouse.x;
+        const dy = p.y - mouse.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < mouse.radius && dist > 0) {
+          const force = (mouse.radius - dist) / mouse.radius;
+          p.x += (dx / dist) * force * 1.6;
+          p.y += (dy / dist) * force * 1.6;
+        }
+
+        // Render node dot
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${colors.nodeRgb}, ${p.alpha})`;
+        ctx.fill();
+
+        // Connect nearby nodes
+        for (let j = i + 1; j < particles.length; j++) {
+          const p2 = particles[j];
+          const dist2 = Math.hypot(p.x - p2.x, p.y - p2.y);
+          if (dist2 < 120) {
+            const lineAlpha = (1 - dist2 / 120) * 0.18;
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.strokeStyle = `rgba(${colors.lineRgb}, ${lineAlpha})`;
+            ctx.lineWidth = 0.75;
+            ctx.stroke();
+          }
+        }
+      }
+
+      requestAnimationFrame(draw);
+    }
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const wasVisible = isVisible;
+            isVisible = entry.isIntersecting;
+            if (!wasVisible && isVisible) {
+              requestAnimationFrame(draw);
+            }
+          });
+        },
+        { threshold: 0.05 }
+      );
+      observer.observe(heroSection);
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  // Initialize
+  initHeroParticles();
 })();
