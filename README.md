@@ -1,52 +1,43 @@
-# Keerthana Varanasi — Portfolio
+# Keerthana Varanasi | Software Development Engineer
 
-Personal portfolio website of **Keerthana Varanasi**, Backend Engineer at Dhan AI.
+> 🌐 **Live Portfolio:** [keerthanavaranasi16.github.io](https://keerthanavaranasi16.github.io)
 
----
-
-## 👤 About Keerthana
-
-*Building systems that make sense.*
-
-Software Engineer with **2+ years of experience** developing and maintaining high-scale distributed backend applications using **Node.js, TypeScript, GraphQL, and REST APIs**.
-
-At **Dhan AI**, Keerthana builds scalable platforms supporting **350,000+ live customers and telecom operations**, integrating event-driven systems using **Apache Kafka**, enterprise CRMs (**Salesforce**, **Dynamics 365**), and low-latency in-memory caching with **Redis**.
-
-- 💼 **Current Role:** Software Development Engineer - 1 at Dhan AI
-- 🧩 **Architecture:** 8+ Microservices worked across distributed systems
-- 🎓 **Education:** B.Tech in Information Technology — Shri Vishnu Engineering College For Women (2020 – 2024)
-- 📍 **Location:** Hyderabad, India
+Professional portfolio distilling 2+ years of experience in building scalable backend architectures, distributed streaming systems, and enterprise microservices.
 
 ---
 
-## ⚡ Key Features
+## About Me
 
-1. **Interactive API Console & CLI (`#api-console`)**:
-   - Query live endpoint: `GET /api/v1/profile` with interactive Send Request runner.
-   - Real-time syntax-highlighted JSON output and response latency simulation (`< 10ms`).
-   - Interactive terminal CLI mode supporting commands like `help`, `profile`, `skills`, `projects`, `experience`, `contact`.
-2. **System Architecture Topology Visualizer (`#topology`)**:
-   - Interactive blueprint of the **Customer Self-Service Platform** supporting 350K+ telecom subscribers.
-   - Inspectable tiers: Clients ➔ API Gateway ➔ Kafka Event Stream ➔ Redis & DBs ➔ Salesforce & Auth.
-3. **Theme Engine**:
-   - Zero-FOUC Dark and Light theme modes with automatic OS detection and `localStorage` persistence.
-4. **Accessible & Responsive**:
-   - 100% semantic HTML5, WCAG color contrast, keyboard navigable, and optimized for mobile devices.
+I'm a **Software Development Engineer** with a passion for building resilient backend systems that make sense. Currently at **Dhan AI**, developing high-scale customer-facing platforms supporting **350,000+ live customers** and mission-critical telecom operations.
 
 ---
 
-## 🛠️ Tech Stack
+## Technical Skills
 
-- **Core:** HTML5, Modern CSS (Custom Properties, Glassmorphism, CSS Grid & Flexbox), Vanilla JavaScript (ES6+)
-- **Typography:** Plus Jakarta Sans & JetBrains Mono (Google Fonts)
-- **Deployment:** GitHub Pages / Static Hosting (.nojekyll enabled)
+- **Languages**: TypeScript, JavaScript, Node.js, Python, Java, SQL
+- **Backend & Architecture**: GraphQL, REST APIs, Microservices Architecture, Event-Driven Design, API Gateway, Performance Optimization
+- **Databases & Caching**: Redis (In-Memory Caching), PostgreSQL, MongoDB, MySQL
+- **Streaming & Integrations**: Apache Kafka, Salesforce CRM, Microsoft Dynamics 365, Firebase Auth (RBAC)
 
 ---
 
-## 📬 Contact
+## Professional Experience
 
-- **Email:** [keerthanavaranasi16@gmail.com](mailto:keerthanavaranasi16@gmail.com)
-- **LinkedIn:** [linkedin.com/in/keerthanavaranasi](https://linkedin.com/in/keerthanavaranasi)
-- **GitHub:** [github.com/KeerthanaVaranasi16](https://github.com/KeerthanaVaranasi16)
+### Dhan AI &middot; Hyderabad, India
+- **Software Development Engineer - 1** *(July 2025 – Present)*  
+  Leading backend service development, API enhancements, and architecture scaling for 350K+ live customer platforms.
+- **Junior Software Engineer** *(July 2024 – June 2025)*  
+  Designed production GraphQL & REST APIs, Kafka streaming pipelines, and Salesforce/Dynamics 365 integrations.
+- **Backend Developer Intern** *(January 2024 – June 2024)*  
+  Diagnosed database query bottlenecks, refactored error handling, and optimized API throughput.
+
+---
+
+## Reach Out
+
+- **Portfolio**: [keerthanavaranasi16.github.io](https://keerthanavaranasi16.github.io)
+- **LinkedIn**: [linkedin.com/in/keerthanavaranasi](https://www.linkedin.com/in/keerthanavaranasi/)
+- **GitHub**: [github.com/KeerthanaVaranasi16](https://github.com/KeerthanaVaranasi16)
+- **Email**: [keerthanavaranasi16@gmail.com](mailto:keerthanavaranasi16@gmail.com)
 
 ---
