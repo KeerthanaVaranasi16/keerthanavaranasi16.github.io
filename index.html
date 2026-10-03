@@ -8,7 +8,8 @@
   <meta name="description"
     content="Official engineering portfolio of Keerthana Varanasi, Software Development Engineer - 1 at Dhan AI. Specializing in high-scale distributed backend systems, 8+ microservices, Apache Kafka, and Redis caching supporting 350K+ live customers.">
   <meta name="author" content="Keerthana Varanasi">
-  <meta name="keywords" content="Keerthana Varanasi, Keerthana, Software Development Engineer - 1, Backend Engineer, Dhan AI, Apache Kafka, Redis, Microservices, Node.js, TypeScript">
+  <meta name="keywords"
+    content="Keerthana Varanasi, Keerthana, Software Development Engineer - 1, Backend Engineer, Dhan AI, Apache Kafka, Redis, Microservices, Node.js, TypeScript">
   <meta name="theme-color" content="#090b10">
   <link rel="canonical" href="https://keerthanavaranasi16.github.io/">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -214,7 +215,8 @@
 
             <h1 class="hero-title">
               Hi, I'm <span class="gradient-text">Keerthana Varanasi</span>.<br>
-              <span class="hero-role-rotator" id="hero-role-rotator" title="Hover or tap to explore roles" tabindex="0" role="button" aria-label="Role: Software Development Engineer. Hover or tap to cycle roles.">
+              <span class="hero-role-rotator" id="hero-role-rotator" title="Hover or tap to explore roles" tabindex="0"
+                role="button" aria-label="Role: Software Development Engineer. Hover or tap to cycle roles.">
                 <span class="hero-role-text" id="hero-role-text">Software Development Engineer.</span>
               </span>
             </h1>
@@ -226,15 +228,18 @@
             <!-- Metrics Quick Bar -->
             <div class="metrics-strip" id="hero-metrics">
               <div class="metric-card">
-                <div class="metric-number"><span class="metric-val" data-target="2">2</span><span class="metric-accent">+</span></div>
+                <div class="metric-number"><span class="metric-val" data-target="2">2</span><span
+                    class="metric-accent">+</span></div>
                 <div class="metric-label">Years Backend Exp</div>
               </div>
               <div class="metric-card">
-                <div class="metric-number"><span class="metric-val" data-target="8">8</span><span class="metric-accent">+</span></div>
+                <div class="metric-number"><span class="metric-val" data-target="8">8</span><span
+                    class="metric-accent">+</span></div>
                 <div class="metric-label">Microservices Worked</div>
               </div>
               <div class="metric-card">
-                <div class="metric-number"><span class="metric-val" data-target="350">350</span><span class="metric-accent">K+</span></div>
+                <div class="metric-number"><span class="metric-val" data-target="350">350</span><span
+                    class="metric-accent">K+</span></div>
                 <div class="metric-label">Telecom Users Supported</div>
               </div>
               <div class="metric-card">
@@ -265,7 +270,8 @@
         <div class="section-label">Developer API</div>
         <h2 class="section-title">Backend Profile Endpoint</h2>
         <p class="section-subtitle">
-          Query my developer profile, technical stack, and background via live REST JSON endpoint (testable in Postman, cURL, or browser).
+          Query my developer profile, technical stack, and background via live REST JSON endpoint (testable in Postman,
+          cURL, or browser).
         </p>
 
         <div class="terminal-window">
@@ -322,102 +328,7 @@
       </div>
     </section>
 
-    <!-- SYSTEM ARCHITECTURE TOPOLOGY -->
-    <section class="topology-section" id="topology">
-      <div class="container">
-        <div class="section-label">System Topology</div>
-        <h2 class="section-title">Telecom Self-Service Platform Overview</h2>
-        <p class="section-subtitle">
-          How our customer-facing backend services are structured and integrated at Dhan AI supporting 350,000+ live
-          subscribers. Click on any component to inspect the implementation details.
-        </p>
 
-        <!-- Interactive Node Grid -->
-        <div class="topology-grid">
-          <div class="topology-node active" data-node="clients" id="node-clients">
-            <span class="node-step">Tier 01</span>
-            <div class="node-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                <line x1="12" y1="18" x2="12.01" y2="18"></line>
-              </svg>
-            </div>
-            <div class="node-title">Client Tier</div>
-            <div class="node-tech">Residential Web / App</div>
-          </div>
-
-          <div class="topology-node" data-node="gateway" id="node-gateway">
-            <span class="node-step">Tier 02</span>
-            <div class="node-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-              </svg>
-            </div>
-            <div class="node-title">API Middleware</div>
-            <div class="node-tech">Node.js &middot; TS &middot; GraphQL</div>
-          </div>
-
-          <div class="topology-node" data-node="kafka" id="node-kafka">
-            <span class="node-step">Tier 03</span>
-            <div class="node-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="22 2 11 13"></polygon>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-              </svg>
-            </div>
-            <div class="node-title">Event Streaming</div>
-            <div class="node-tech">Apache Kafka</div>
-          </div>
-
-          <div class="topology-node" data-node="storage" id="node-storage">
-            <span class="node-step">Tier 04</span>
-            <div class="node-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-              </svg>
-            </div>
-            <div class="node-title">Cache &amp; Storage</div>
-            <div class="node-tech">Redis &middot; Postgres &middot; Mongo</div>
-          </div>
-
-          <div class="topology-node" data-node="integrations" id="node-integrations">
-            <span class="node-step">Tier 05</span>
-            <div class="node-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-              </svg>
-            </div>
-            <div class="node-title">Integrations &amp; Auth</div>
-            <div class="node-tech">Salesforce &middot; Dynamics &middot; Firebase</div>
-          </div>
-        </div>
-
-        <!-- Inspector Card for active node -->
-        <div class="topology-inspector" id="topology-inspector">
-          <div class="inspector-header">
-            <h3 class="inspector-title" id="inspector-title">Residential Telecom Clients</h3>
-            <span class="inspector-tag" id="inspector-tag">350K+ Active Users</span>
-          </div>
-          <p class="inspector-desc" id="inspector-desc">
-            Web &amp; mobile applications serving residential telecom subscribers for self-service operations, bill
-            payments, and plan changes.
-          </p>
-          <ul class="inspector-points" id="inspector-points">
-            <li class="inspector-point">High-concurrency traffic during monthly billing cycles.</li>
-            <li class="inspector-point">Low-latency requirements for real-time account and plan balance inquiries.</li>
-            <li class="inspector-point">Cross-platform authentication with secure session handoffs.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
 
     <!-- WORK EXPERIENCE TIMELINE (DHAN AI PROGRESSION) -->
     <section class="experience-section" id="experience">
@@ -466,8 +377,8 @@
 
             <div class="promo-stages-grid" role="tablist" aria-label="Dhan AI Career Stages">
               <!-- STAGE 1: Intern -->
-              <button type="button" class="promo-stage-col stage-1 completed-stage" role="tab" aria-selected="false" data-stage="1"
-                id="tab-stage-1" title="Click to view Backend Developer Intern details">
+              <button type="button" class="promo-stage-col stage-1 completed-stage" role="tab" aria-selected="false"
+                data-stage="1" id="tab-stage-1" title="Click to view Backend Developer Intern details">
                 <div class="promo-marker-wrap">
                   <div class="promo-marker-node" title="Career Start: Backend Developer Intern">
                     <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
@@ -486,8 +397,8 @@
               </button>
 
               <!-- STAGE 2: Junior SE -->
-              <button type="button" class="promo-stage-col stage-2 completed-stage" role="tab" aria-selected="false" data-stage="2"
-                id="tab-stage-2" title="Click to view Junior Software Engineer details">
+              <button type="button" class="promo-stage-col stage-2 completed-stage" role="tab" aria-selected="false"
+                data-stage="2" id="tab-stage-2" title="Click to view Junior Software Engineer details">
                 <div class="promo-marker-wrap">
                   <div class="promo-marker-node" title="Full-Time: Junior Software Engineer">
                     <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
@@ -544,26 +455,31 @@
               </div>
 
               <p class="pane-description">
-                Developing backend applications and contributing to API enhancements for high-scale platforms supporting
-                <strong>350,000+ live residential customers and major telecom operations</strong>.
+                Building and scaling distributed backend microservices, real-time event-driven pipelines, and
+                cross-system synchronization workflows across production platforms.
               </p>
 
               <ul class="pane-bullets">
-                <li>Developed high-scale platforms using Node.js, TypeScript &amp; Python, supporting 350K+ live
-                  residential customers and critical telecom operations.</li>
-                <li>Contributed to core backend architecture improvements and API enhancements supporting multiple
-                  mission-critical business initiatives.</li>
-                <li>Conducted deep error scenario analyses and performance optimizations for live customer-facing
-                  applications.</li>
+                <li>Engineered resilient event-driven microservices in Node.js and TypeScript, handling real-time data
+                  streaming and asynchronous transaction processing.</li>
+                <li>Developed bi-directional data synchronization mechanisms across enterprise CRM and ERP systems,
+                  ensuring strict referential integrity and zero record duplication.</li>
+                <li>Optimized API payload transformation pipelines to convert complex enterprise domain schemas with
+                  sub-second processing latencies.</li>
+                <li>Partnered with cross-functional engineering, product, and QA teams to diagnose distributed edge
+                  cases
+                  and maintain service reliability.</li>
               </ul>
 
               <div class="pane-tech-badges">
                 <span class="tech-badge">Node.js</span>
                 <span class="tech-badge">TypeScript</span>
-                <span class="tech-badge">Python</span>
-                <span class="tech-badge">GraphQL</span>
                 <span class="tech-badge">Apache Kafka</span>
-                <span class="tech-badge">Redis</span>
+                <span class="tech-badge">Microservices</span>
+                <span class="tech-badge">Salesforce CRM</span>
+                <span class="tech-badge">Microsoft Dynamics 365</span>
+                <span class="tech-badge">REST APIs</span>
+                <span class="tech-badge">MongoDB</span>
                 <span class="tech-badge">Distributed Systems</span>
               </div>
             </div>
@@ -582,17 +498,23 @@
               </div>
 
               <p class="pane-description">
-                Engineered production GraphQL and REST APIs, integrated enterprise CRMs, and built event-driven activity
-                streaming pipelines.
+                Engineered production GraphQL and REST APIs, integrated enterprise services, and built event-driven
+                activity streaming pipelines.
               </p>
 
               <ul class="pane-bullets">
-                <li>Designed and developed scalable GraphQL and REST APIs using Node.js and TypeScript for
-                  customer-facing self-service portals.</li>
-                <li>Enhanced customer-facing solutions by integrating secure, data-driven systems using Apache Kafka,
-                  Microsoft Dynamics 365, Salesforce CRM, and Firebase Auth.</li>
-                <li>Implemented Redis caching strategies to accelerate frequently requested customer account and billing
-                  endpoints to sub-10ms latency.</li>
+                <li>Developed and maintained high-traffic REST and GraphQL API services supporting real-time account
+                  operations for 350K+ active users.</li>
+                <li>Implemented multi-tier caching architectures with Redis to optimize database read performance and
+                  accelerate high-frequency queries to under 10ms.</li>
+                <li>Integrated secure identity management and granular Role-Based Access Control (RBAC) to protect
+                  sensitive account and billing transactions.</li>
+                <li>Built background Kafka event producers to capture telemetry, track user lifecycle events, and
+                  trigger
+                  automated downstream actions.</li>
+                <li>Participated actively in sprint planning, code reviews, and performance profiling to eliminate
+                  latency
+                  bottlenecks across services.</li>
               </ul>
 
               <div class="pane-tech-badges">
@@ -601,7 +523,8 @@
                 <span class="tech-badge">GraphQL</span>
                 <span class="tech-badge">REST APIs</span>
                 <span class="tech-badge">Salesforce CRM</span>
-                <span class="tech-badge">Dynamics 365</span>
+                <span class="tech-badge">Redis</span>
+                <span class="tech-badge">Apache Kafka</span>
                 <span class="tech-badge">Firebase Auth</span>
               </div>
             </div>
@@ -754,14 +677,54 @@
         </p>
 
         <div class="projects-grid">
-          <!-- Project 1: Customer Self-Service Portal -->
+          <!-- Project 1: Sales Order Orchestrator -->
+          <article class="project-card" id="project-order-orchestrator">
+            <div class="project-header">
+              <div>
+                <span class="project-category">&middot; Enterprise Integration &amp; Event-Driven Architecture</span>
+                <h3 class="project-title">Sales Order Orchestrator</h3>
+              </div>
+            </div>
+
+            <p class="project-desc">
+              Enterprise event-driven order orchestration and synchronization platform bridging sales operations in
+              Salesforce CRM with operational fulfillment and provisioning in Microsoft Dynamics 365.
+            </p>
+
+            <ul class="project-highlights">
+              <li class="project-highlight-item">Designed and developed scalable backend microservices using Node.js and
+                TypeScript to consume real-time domain events via Apache Kafka and automate end-to-end order execution
+                in Microsoft Dynamics 365.</li>
+              <li class="project-highlight-item">Implemented complex payload transformation and mapping pipelines to
+                convert nested Salesforce domain models and commercial order structures into Dynamics OData REST API
+                schemas.</li>
+              <li class="project-highlight-item">Engineered an asynchronous bi-directional sync loop to capture
+                operational system identifiers and update upstream CRM records, ensuring cross-system referential
+                integrity and preventing duplicate records.</li>
+              <li class="project-highlight-item">Collaborated closely with cross-functional engineering, CRM, and QA
+                teams to troubleshoot production edge cases, and ensure seamless releases.</li>
+            </ul>
+
+            <div class="tech-badges-list">
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">Apache Kafka</span>
+              <span class="tech-badge">Microservices</span>
+              <span class="tech-badge">Salesforce CRM</span>
+              <span class="tech-badge">Microsoft Dynamics 365</span>
+              <span class="tech-badge">REST APIs</span>
+              <span class="tech-badge">MongoDB</span>
+              <span class="tech-badge">Distributed Systems</span>
+            </div>
+          </article>
+
+          <!-- Project 2: Customer Self-Service Portal -->
           <article class="project-card" id="project-portal">
             <div class="project-header">
               <div>
-                <span class="project-category">· 350,000+ Live Users</span>
+                <span class="project-category">&middot; 350,000+ Live Users</span>
                 <h3 class="project-title">Customer Self-Service Portal</h3>
               </div>
-
             </div>
 
             <p class="project-desc">
@@ -778,8 +741,6 @@
                 response times for high-frequency customer queries.</li>
               <li class="project-highlight-item">Published customer activity events to Apache Kafka, enabling downstream
                 business analytics and automated behavior tracking.</li>
-              <li class="project-highlight-item">Integrated multiple microservices to deliver unified user experiences
-                across billing, payments, and account domains.</li>
               <li class="project-highlight-item">Collaborated closely with cross-functional engineering teams to
                 troubleshoot complex production issues and ensure maximum system reliability.</li>
             </ul>
@@ -788,10 +749,11 @@
               <span class="tech-badge">Node.js</span>
               <span class="tech-badge">TypeScript</span>
               <span class="tech-badge">GraphQL</span>
+              <span class="tech-badge">REST APIs</span>
+              <span class="tech-badge">Salesforce CRM</span>
               <span class="tech-badge">Redis</span>
               <span class="tech-badge">Apache Kafka</span>
               <span class="tech-badge">Firebase Auth</span>
-              <span class="tech-badge">REST APIs</span>
               <span class="tech-badge">Microservices</span>
               <span class="tech-badge">Distributed Systems</span>
             </div>
@@ -845,7 +807,8 @@
           </div>
           <h2 class="contact-title">Let's Build Resilient Systems Together</h2>
           <p class="contact-lead">
-            I'm always excited to discuss scalable backend development, distributed systems, high-throughput Kafka streaming, and new engineering opportunities.
+            I'm always excited to discuss scalable backend development, distributed systems, high-throughput Kafka
+            streaming, and new engineering opportunities.
           </p>
 
           <div class="contact-options">
@@ -880,7 +843,8 @@
           </div>
 
           <div class="contact-cta-action">
-            <a href="mailto:keerthanavaranasi16@gmail.com" class="btn btn-primary btn-large-contact" id="footer-mailto-btn">
+            <a href="mailto:keerthanavaranasi16@gmail.com" class="btn btn-primary btn-large-contact"
+              id="footer-mailto-btn">
               <span>Send Message Directly</span>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                 stroke-linecap="round" stroke-linejoin="round">
@@ -912,7 +876,7 @@
 
   <!-- SCRIPTS -->
   <script src="assets/js/main.js?v=4.0"></script>
-  <script src="assets/js/api-console.js?v=3.5"></script>
+  <script src="assets/js/api-console.js?v=3.6"></script>
 </body>
 
 </html>
