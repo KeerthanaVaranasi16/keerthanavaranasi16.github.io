@@ -34,7 +34,7 @@ Enterprise event-driven order orchestration and synchronization platform bridgin
 ### 02. Customer Self-Service Platform
 **Role: Software Development Engineer**  
 High-scale customer self-care platform serving **350,000+ residential telecom subscribers** for real-time billing, account management, payment processing, and operational workflows.
-- Designed and developed scalable backend APIs using **Node.js & TypeScript** supporting billing, payments, and customer operations.
+- Designed and developed scalable backend APIs using **Node.js & TypeScript** supporting 350,000+ live residential customers across billing, payments, and customer operations.
 - Built **Salesforce CRM** integrations to synchronize customer account records and operational service workflows.
 - Integrated **Firebase Authentication** with robust role-based access control (RBAC) to enforce secure authentication and authorization workflows.
 - Leveraged **Redis caching** to optimize throughput and achieve sub-10ms response times for high-frequency customer queries.
