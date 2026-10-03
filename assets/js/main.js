@@ -770,11 +770,12 @@
     }
 
     function startCycle() {
-      isHovered = true;
       if (revertTimeout) {
         clearTimeout(revertTimeout);
         revertTimeout = null;
       }
+      if (isHovered) return;
+      isHovered = true;
 
       // Immediately step to the next role on hover
       advanceRole();
@@ -785,10 +786,15 @@
         if (isHovered) {
           advanceRole();
         }
-      }, 2200);
+      }, 2000);
     }
 
-    function stopCycle() {
+    function stopCycle(e) {
+      // If moving to another element inside heroTitle, ignore
+      if (e && e.relatedTarget && heroTitle.contains(e.relatedTarget)) {
+        return;
+      }
+
       isHovered = false;
       if (cycleInterval) {
         clearInterval(cycleInterval);
@@ -801,11 +807,12 @@
         if (!isHovered && currentIndex !== 0) {
           transitionToRole(0);
         }
-      }, 850);
+      }, 650);
     }
 
     heroTitle.addEventListener('mouseenter', startCycle);
     heroTitle.addEventListener('mouseleave', stopCycle);
+    roleRotator.addEventListener('mouseenter', startCycle);
 
     // Support click or mobile tap to advance immediately
     roleRotator.addEventListener('click', (e) => {
