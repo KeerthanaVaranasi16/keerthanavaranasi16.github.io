@@ -128,8 +128,10 @@
   // --------------------------------------------------------------------------
   // ACTIVE SECTION SPY & SMOOTH SCROLL
   // --------------------------------------------------------------------------
+  // ACTIVE SECTION SPY & SMOOTH SCROLL
+  // --------------------------------------------------------------------------
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
 
   function updateActiveNav() {
     const scrollY = window.pageYOffset;
@@ -152,25 +154,76 @@
   window.addEventListener('scroll', updateActiveNav, { passive: true });
 
   // --------------------------------------------------------------------------
-  // MOBILE NAVIGATION TOGGLE
+  // MOBILE SIDE NAVIGATION DRAWER
   // --------------------------------------------------------------------------
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-  const navMenu = document.getElementById('nav-menu');
+  const mobileSideNav = document.getElementById('mobile-side-nav');
+  const mobileNavBackdrop = document.getElementById('mobile-nav-backdrop');
+  const mobileNavClose = document.getElementById('mobile-nav-close');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-  if (mobileMenuBtn && navMenu) {
+  function openMobileNav() {
+    if (!mobileSideNav) return;
+    mobileSideNav.classList.add('open');
+    mobileSideNav.setAttribute('aria-hidden', 'false');
+    if (mobileNavBackdrop) {
+      mobileNavBackdrop.classList.add('open');
+      mobileNavBackdrop.setAttribute('aria-hidden', 'false');
+    }
+    if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileNav() {
+    if (!mobileSideNav) return;
+    mobileSideNav.classList.remove('open');
+    mobileSideNav.setAttribute('aria-hidden', 'true');
+    if (mobileNavBackdrop) {
+      mobileNavBackdrop.classList.remove('open');
+      mobileNavBackdrop.setAttribute('aria-hidden', 'true');
+    }
+    if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-      const expanded = navMenu.classList.contains('open');
-      mobileMenuBtn.setAttribute('aria-expanded', expanded);
-    });
-
-    // Close on link click
-    navMenu.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-      });
+      const isOpen = mobileSideNav && mobileSideNav.classList.contains('open');
+      if (isOpen) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
     });
   }
+
+  if (mobileNavClose) {
+    mobileNavClose.addEventListener('click', closeMobileNav);
+  }
+
+  if (mobileNavBackdrop) {
+    mobileNavBackdrop.addEventListener('click', closeMobileNav);
+  }
+
+  mobileNavLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      closeMobileNav();
+    });
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileSideNav && mobileSideNav.classList.contains('open')) {
+      closeMobileNav();
+    }
+  });
+
+  // Auto-close when viewport expands beyond mobile breakpoint (860px)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 860 && mobileSideNav && mobileSideNav.classList.contains('open')) {
+      closeMobileNav();
+    }
+  }, { passive: true });
 
   // --------------------------------------------------------------------------
   // DHAN AI PROGRESSION PROGRESS & EXPERIENCE INTERACTION
@@ -184,9 +237,45 @@
 
   let currentActiveStage = '3';
 
+  function alignMobileTrack() {
+    const isMobile = window.innerWidth <= 920;
+    const trackBg = document.querySelector('.promo-track-bg');
+    const stage1Wrap = document.querySelector('.promo-stage-col.stage-1 .promo-marker-wrap');
+    const stage3Wrap = document.querySelector('.promo-stage-col.stage-3 .promo-marker-wrap');
+    const rail = document.querySelector('.promo-visual-rail');
+
+    if (!trackBg || !rail) return;
+
+    if (!isMobile) {
+      trackBg.style.top = '';
+      trackBg.style.height = '';
+      trackBg.style.bottom = '';
+      trackBg.style.left = '';
+      return;
+    }
+
+    if (stage1Wrap && stage3Wrap) {
+      const railRect = rail.getBoundingClientRect();
+      const s1Rect = stage1Wrap.getBoundingClientRect();
+      const s3Rect = stage3Wrap.getBoundingClientRect();
+
+      const topY = (s1Rect.top + s1Rect.height / 2) - railRect.top;
+      const bottomY = (s3Rect.top + s3Rect.height / 2) - railRect.top;
+      const totalH = Math.max(0, bottomY - topY);
+      const centerX = (s1Rect.left + s1Rect.width / 2) - railRect.left;
+
+      trackBg.style.top = `${Math.round(topY)}px`;
+      trackBg.style.height = `${Math.round(totalH)}px`;
+      trackBg.style.bottom = 'auto';
+      trackBg.style.left = `${Math.round(centerX - 3)}px`;
+    }
+  }
+
   function updateProgressTrack(stageNum) {
     if (!trackFill) return;
     const isMobile = window.innerWidth <= 920;
+    alignMobileTrack();
+
     const progressMap = { '1': '0%', '2': '50%', '3': '100%' };
     const pct = progressMap[stageNum] || '100%';
 
@@ -200,6 +289,9 @@
 
     trackFill.classList.toggle('zero-fill', stageNum === '1');
   }
+
+  window.addEventListener('resize', alignMobileTrack, { passive: true });
+  window.addEventListener('load', alignMobileTrack);
 
   function selectStage(stageNum) {
     currentActiveStage = String(stageNum);
@@ -651,12 +743,31 @@
     let currentIndex = 0;
     let isHovered = false;
     let isAnimating = false;
+    let isRotatingSequence = false;
     let cycleInterval = null;
     let revertTimeout = null;
+    let rotationTimers = [];
 
-    function transitionToRole(nextIndex) {
+    function clearAllTimers() {
+      if (cycleInterval) {
+        clearInterval(cycleInterval);
+        cycleInterval = null;
+      }
+      if (revertTimeout) {
+        clearTimeout(revertTimeout);
+        revertTimeout = null;
+      }
+      rotationTimers.forEach((t) => clearTimeout(t));
+      rotationTimers = [];
+      isRotatingSequence = false;
+    }
+
+    function transitionToRole(nextIndex, onComplete) {
       if (isAnimating) return;
-      if (currentIndex === nextIndex && roleText.textContent === roles[nextIndex]) return;
+      if (currentIndex === nextIndex && roleText.textContent === roles[nextIndex]) {
+        if (onComplete) onComplete();
+        return;
+      }
 
       isAnimating = true;
       currentIndex = nextIndex;
@@ -680,28 +791,52 @@
         setTimeout(() => {
           roleText.classList.remove('slide-in');
           isAnimating = false;
+          if (onComplete) onComplete();
         }, 300);
       }, 220);
     }
 
-    function advanceRole() {
+    function advanceRole(onComplete) {
       const nextIdx = (currentIndex + 1) % roles.length;
-      transitionToRole(nextIdx);
+      transitionToRole(nextIdx, onComplete);
     }
 
-    function startCycle() {
-      if (revertTimeout) {
-        clearTimeout(revertTimeout);
-        revertTimeout = null;
-      }
-      if (isHovered) return;
-      isHovered = true;
+    // Single complete rotation for mobile tap:
+    // Cycles through all alternate roles and gracefully stops back at Software Development Engineer.
+    function runSingleRotationSequence() {
+      clearAllTimers();
+      isRotatingSequence = true;
 
-      // Immediately step to the next role on hover
+      // Step 1: Advance to Backend Engineer
       advanceRole();
 
-      // Continue cycling one by one while hovered
-      if (cycleInterval) clearInterval(cycleInterval);
+      // Step 2: Advance to Forward Deployed Engineer after 1.7s
+      const timer1 = setTimeout(() => {
+        advanceRole();
+
+        // Step 3: Advance back to Software Development Engineer after another 1.7s and stop
+        const timer2 = setTimeout(() => {
+          advanceRole(() => {
+            isRotatingSequence = false;
+          });
+        }, 1700);
+
+        rotationTimers.push(timer2);
+      }, 1700);
+
+      rotationTimers.push(timer1);
+    }
+
+    // Continuous cycling for desktop mouse hover only
+    function startHoverCycle() {
+      const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+      if (isTouch) return;
+
+      clearAllTimers();
+      isHovered = true;
+
+      advanceRole();
+
       cycleInterval = setInterval(() => {
         if (isHovered) {
           advanceRole();
@@ -709,8 +844,7 @@
       }, 2000);
     }
 
-    function stopCycle(e) {
-      // If moving to another element inside heroTitle, ignore
+    function stopHoverCycle(e) {
       if (e && e.relatedTarget && heroTitle.contains(e.relatedTarget)) {
         return;
       }
@@ -721,30 +855,49 @@
         cycleInterval = null;
       }
 
-      // Gracefully revert back to default role (Software Development Engineer)
       if (revertTimeout) clearTimeout(revertTimeout);
       revertTimeout = setTimeout(() => {
-        if (!isHovered && currentIndex !== 0) {
+        if (!isHovered && currentIndex !== 0 && !isRotatingSequence) {
           transitionToRole(0);
         }
       }, 650);
     }
 
-    heroTitle.addEventListener('mouseenter', startCycle);
-    heroTitle.addEventListener('mouseleave', stopCycle);
-    roleRotator.addEventListener('mouseenter', startCycle);
+    // Desktop mouse hover events
+    heroTitle.addEventListener('mouseenter', (e) => {
+      if (window.matchMedia('(hover: none), (pointer: coarse)').matches) return;
+      startHoverCycle();
+    });
 
-    // Support click or mobile tap to advance immediately
+    heroTitle.addEventListener('mouseleave', (e) => {
+      if (window.matchMedia('(hover: none), (pointer: coarse)').matches) return;
+      stopHoverCycle(e);
+    });
+
+    // Mobile tap & click handling:
+    // If tapped while running, immediately complete and stop at default role.
+    // If tapped while idle, perform one complete rotation through the roles and stop.
     roleRotator.addEventListener('click', (e) => {
       e.stopPropagation();
-      advanceRole();
+
+      if (isRotatingSequence) {
+        clearAllTimers();
+        transitionToRole(0);
+      } else {
+        runSingleRotationSequence();
+      }
     });
 
     // Keyboard support
     roleRotator.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        advanceRole();
+        if (isRotatingSequence) {
+          clearAllTimers();
+          transitionToRole(0);
+        } else {
+          runSingleRotationSequence();
+        }
       }
     });
   }
