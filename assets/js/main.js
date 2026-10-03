@@ -712,6 +712,117 @@
     requestAnimationFrame(draw);
   }
 
+  // --------------------------------------------------------------------------
+  // HERO DYNAMIC ROLE ROTATOR
+  // --------------------------------------------------------------------------
+  function initHeroRoleRotator() {
+    const heroTitle = document.querySelector('.hero-title');
+    const roleRotator = document.getElementById('hero-role-rotator');
+    const roleText = document.getElementById('hero-role-text');
+
+    if (!heroTitle || !roleRotator || !roleText) return;
+
+    const roles = [
+      'Software Development Engineer.',
+      'Backend Engineer.',
+      'Forward Deployed Engineer.'
+    ];
+
+    let currentIndex = 0;
+    let isHovered = false;
+    let isAnimating = false;
+    let cycleInterval = null;
+    let revertTimeout = null;
+
+    function transitionToRole(nextIndex) {
+      if (isAnimating) return;
+      if (currentIndex === nextIndex && roleText.textContent === roles[nextIndex]) return;
+
+      isAnimating = true;
+      currentIndex = nextIndex;
+
+      roleText.classList.remove('slide-in', 'slide-in-prep');
+      roleText.classList.add('slide-out');
+
+      setTimeout(() => {
+        roleText.textContent = roles[currentIndex];
+        roleRotator.setAttribute('aria-label', `Role: ${roles[currentIndex]}`);
+
+        roleText.classList.remove('slide-out');
+        roleText.classList.add('slide-in-prep');
+
+        // Force browser layout reflow
+        void roleText.offsetWidth;
+
+        roleText.classList.remove('slide-in-prep');
+        roleText.classList.add('slide-in');
+
+        setTimeout(() => {
+          roleText.classList.remove('slide-in');
+          isAnimating = false;
+        }, 300);
+      }, 220);
+    }
+
+    function advanceRole() {
+      const nextIdx = (currentIndex + 1) % roles.length;
+      transitionToRole(nextIdx);
+    }
+
+    function startCycle() {
+      isHovered = true;
+      if (revertTimeout) {
+        clearTimeout(revertTimeout);
+        revertTimeout = null;
+      }
+
+      // Immediately step to the next role on hover
+      advanceRole();
+
+      // Continue cycling one by one while hovered
+      if (cycleInterval) clearInterval(cycleInterval);
+      cycleInterval = setInterval(() => {
+        if (isHovered) {
+          advanceRole();
+        }
+      }, 2200);
+    }
+
+    function stopCycle() {
+      isHovered = false;
+      if (cycleInterval) {
+        clearInterval(cycleInterval);
+        cycleInterval = null;
+      }
+
+      // Gracefully revert back to default role (Software Development Engineer)
+      if (revertTimeout) clearTimeout(revertTimeout);
+      revertTimeout = setTimeout(() => {
+        if (!isHovered && currentIndex !== 0) {
+          transitionToRole(0);
+        }
+      }, 850);
+    }
+
+    heroTitle.addEventListener('mouseenter', startCycle);
+    heroTitle.addEventListener('mouseleave', stopCycle);
+
+    // Support click or mobile tap to advance immediately
+    roleRotator.addEventListener('click', (e) => {
+      e.stopPropagation();
+      advanceRole();
+    });
+
+    // Keyboard support
+    roleRotator.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        advanceRole();
+      }
+    });
+  }
+
   // Initialize
   initHeroParticles();
+  initHeroRoleRotator();
 })();
