@@ -79,10 +79,11 @@
           "period": "July 2024 – June 2025",
           "type": "Full-Time",
           "highlights": [
-            "Transitioned into full-time engineering owning critical service modules for high-traffic customer platforms",
-            "Built event-driven background pipelines using Apache Kafka for reliable asynchronous messaging",
-            "Integrated Redis in-memory caching layer achieving sub-10ms response latency for repeated queries",
-            "Engineered enterprise data integrations connecting third-party systems including Salesforce and Microsoft Dynamics 365"
+            "Developed and maintained high-traffic REST and GraphQL API services supporting real-time account operations for 350K+ active users",
+            "Implemented multi-tier caching architectures with Redis to optimize database read performance and accelerate high-frequency queries to under 10ms",
+            "Integrated secure identity management and granular Role-Based Access Control (RBAC) to protect sensitive account and billing transactions",
+            "Built background Kafka event producers to capture telemetry, track user lifecycle events, and trigger automated downstream actions",
+            "Participated actively in sprint planning, code reviews, and performance profiling to eliminate latency bottlenecks across services"
           ]
         },
         {
@@ -92,19 +93,26 @@
           "period": "July 2025 – Present",
           "type": "Full-Time (Current Role)",
           "highlights": [
-            "Developing backend applications and contributing to API enhancements for platforms supporting 350,000+ live residential telecom customers",
-            "Design and maintain high-scale GraphQL and REST APIs with comprehensive validation and error handling",
-            "Architect robust data sync pipelines with third-party enterprise platforms (Salesforce CRM, Dynamics 365)",
-            "Maintain 99.9% platform availability across peak customer billing and usage periods"
+            "Engineered resilient event-driven microservices in Node.js and TypeScript, handling real-time data streaming and asynchronous transaction processing",
+            "Developed bi-directional data synchronization mechanisms across enterprise CRM and ERP systems, ensuring strict referential integrity and zero record duplication",
+            "Optimized API payload transformation pipelines to convert complex enterprise domain schemas with sub-second processing latencies",
+            "Partnered with cross-functional engineering, product, and QA teams to diagnose distributed edge cases and maintain service reliability"
           ]
         }
       ],
       "featuredProjects": [
         {
+          "id": "sales-order-orchestrator",
+          "title": "Sales Order Orchestrator",
+          "scale": "Enterprise CRM & ERP Integration Platform",
+          "stack": ["Node.js", "TypeScript", "Apache Kafka", "Microservices", "Salesforce CRM", "Microsoft Dynamics 365", "REST APIs", "MongoDB"],
+          "description": "Enterprise event-driven order orchestration and synchronization platform bridging sales operations in Salesforce CRM with operational fulfillment and provisioning in Microsoft Dynamics 365."
+        },
+        {
           "id": "customer-self-service-portal",
           "title": "Customer Self-Service Portal",
           "scale": "350,000+ Live Telecom Customers",
-          "stack": ["Node.js", "TypeScript", "GraphQL", "Redis", "Kafka", "Salesforce"],
+          "stack": ["Node.js", "TypeScript", "GraphQL", "REST APIs", "Salesforce CRM", "Redis", "Apache Kafka", "Firebase Auth", "Microservices", "Distributed Systems"],
           "description": "High-scale customer-facing self-service platform designed and maintained for residential telecom subscribers, supporting bill pay, plan changes, and real-time usage tracking."
         },
         {
@@ -264,34 +272,12 @@
             <span>Send Request</span>
           </button>
         </div>
-
-        <!-- Quick Access Actions for Postman & Browsers -->
-        <div class="api-external-actions" style="margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center;">
-          <a href="api/v1/profile" target="_blank" rel="noopener noreferrer" class="terminal-action-chip">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            <span>Open in Browser</span>
-          </a>
-          <button type="button" id="copy-endpoint-btn" class="terminal-action-chip">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            <span id="copy-endpoint-text">Copy Postman URL</span>
-          </button>
-          <a href="api/v1/profile.json" target="_blank" rel="noopener noreferrer" class="terminal-action-chip">
-            <span>profile.json</span>
-          </a>
-        </div>
       </div>
     `;
 
     const cardSendBtn = document.getElementById('api-card-send-btn');
     if (cardSendBtn) {
       cardSendBtn.addEventListener('click', triggerFetch);
-    }
-
-    const copyBtn = document.getElementById('copy-endpoint-btn');
-    if (copyBtn) {
-      copyBtn.addEventListener('click', () => {
-        copyToClipboard(LIVE_API_URL, copyBtn, 'Postman URL copied! Paste into Postman GET request');
-      });
     }
   }
 
@@ -300,6 +286,10 @@
     tabButtons.forEach((btn) => {
       btn.classList.toggle('active', btn.getAttribute('data-tab') === tabKey);
     });
+
+    if (tabKey === 'cli') {
+      profileFetched = false;
+    }
 
     if (tabKey === 'profile') {
       if (!profileFetched) {
@@ -452,10 +442,10 @@
       `;
     } else if (cmd === 'projects') {
       outLine.innerHTML = `
+        <strong>Sales Order Orchestrator</strong> (Node.js, TypeScript, Kafka, Microservices, Salesforce, Dynamics 365, MongoDB)<br>
+        Enterprise event-driven order orchestration platform bridging sales operations in Salesforce CRM with operational fulfillment and provisioning in Microsoft Dynamics 365.<br><br>
         <strong>Customer Self-Service Portal</strong> (Node.js, TypeScript, GraphQL, Redis, Kafka, Salesforce)<br>
-        High-scale platform supporting 350,000+ residential telecom customers with billing, payments, and account operations.<br><br>
-        <strong>Enterprise RBAC System</strong> (Node.js, Firebase Auth, PostgreSQL, REST APIs)<br>
-        Fine-grained authorization service implementing dynamic role-based access control and token validation.
+        High-scale platform supporting 350,000+ residential telecom customers with billing, payments, and account operations.
       `;
     } else if (cmd === 'experience') {
       outLine.innerHTML = `

@@ -69,10 +69,11 @@
         "period": "July 2024 – June 2025",
         "type": "Full-Time",
         "highlights": [
-          "Transitioned into full-time engineering owning critical service modules for high-traffic customer platforms",
-          "Built event-driven background pipelines using Apache Kafka for reliable asynchronous messaging",
-          "Integrated Redis in-memory caching layer achieving sub-10ms response latency for repeated queries",
-          "Engineered enterprise data integrations connecting third-party systems including Salesforce and Microsoft Dynamics 365"
+          "Developed and maintained high-traffic REST and GraphQL API services supporting real-time account operations for 350K+ active users",
+          "Implemented multi-tier caching architectures with Redis to optimize database read performance and accelerate high-frequency queries to under 10ms",
+          "Integrated secure identity management and granular Role-Based Access Control (RBAC) to protect sensitive account and billing transactions",
+          "Built background Kafka event producers to capture telemetry, track user lifecycle events, and trigger automated downstream actions",
+          "Participated actively in sprint planning, code reviews, and performance profiling to eliminate latency bottlenecks across services"
         ]
       },
       {
@@ -82,19 +83,46 @@
         "period": "July 2025 – Present",
         "type": "Full-Time (Current Role)",
         "highlights": [
-          "Developing backend applications and contributing to API enhancements for platforms supporting 350,000+ live residential telecom customers",
-          "Design and maintain high-scale GraphQL and REST APIs with comprehensive validation and error handling",
-          "Architect robust data sync pipelines with third-party enterprise platforms (Salesforce CRM, Dynamics 365)",
-          "Maintain 99.9% platform availability across peak customer billing and usage periods"
+          "Engineered resilient event-driven microservices in Node.js and TypeScript, handling real-time data streaming and asynchronous transaction processing",
+          "Developed bi-directional data synchronization mechanisms across enterprise CRM and ERP systems, ensuring strict referential integrity and zero record duplication",
+          "Optimized API payload transformation pipelines to convert complex enterprise domain schemas with sub-second processing latencies",
+          "Partnered with cross-functional engineering, product, and QA teams to diagnose distributed edge cases and maintain service reliability"
         ]
       }
     ],
     "featuredProjects": [
       {
+        "id": "sales-order-orchestrator",
+        "title": "Sales Order Orchestrator",
+        "scale": "Enterprise CRM & ERP Integration Platform",
+        "stack": [
+          "Node.js",
+          "TypeScript",
+          "Apache Kafka",
+          "Microservices",
+          "Salesforce CRM",
+          "Microsoft Dynamics 365",
+          "REST APIs",
+          "MongoDB"
+        ],
+        "description": "Enterprise event-driven order orchestration and synchronization platform bridging sales operations in Salesforce CRM with operational fulfillment and provisioning in Microsoft Dynamics 365."
+      },
+      {
         "id": "customer-self-service-portal",
         "title": "Customer Self-Service Portal",
         "scale": "350,000+ Live Telecom Customers",
-        "stack": ["Node.js", "TypeScript", "GraphQL", "Redis", "Kafka", "Salesforce"],
+        "stack": [
+          "Node.js",
+          "TypeScript",
+          "GraphQL",
+          "REST APIs",
+          "Salesforce CRM",
+          "Redis",
+          "Apache Kafka",
+          "Firebase Auth",
+          "Microservices",
+          "Distributed Systems"
+        ],
         "description": "High-scale customer-facing self-service platform designed and maintained for residential telecom subscribers, supporting bill pay, plan changes, and real-time usage tracking."
       }
     ],
