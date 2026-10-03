@@ -1,6 +1,6 @@
 # Keerthana Varanasi | Software Development Engineer
 
-> 🌐 **Live Portfolio:** [keerthanavaranasi16.github.io](https://keerthanavaranasi16.github.io)
+> 🌐 **Live Portfolio:** [https://keerthanavaranasi.is-a.dev](https://keerthanavaranasi.is-a.dev)
 
 Professional portfolio distilling 2+ years of experience in building scalable backend architectures, distributed streaming systems, and enterprise microservices.
 
@@ -65,7 +65,7 @@ High-scale customer self-care platform serving **350,000+ residential telecom su
 
 ## Reach Out
 
-- **Portfolio**: [keerthanavaranasi16.github.io](https://keerthanavaranasi16.github.io)
+- **Portfolio**: [https://keerthanavaranasi.is-a.dev/](https://keerthanavaranasi.is-a.dev/)
 - **LinkedIn**: [linkedin.com/in/keerthanavaranasi](https://www.linkedin.com/in/keerthanavaranasi/)
 - **GitHub**: [github.com/KeerthanaVaranasi16](https://github.com/KeerthanaVaranasi16)
 - **Email**: [keerthanavaranasi16@gmail.com](mailto:keerthanavaranasi16@gmail.com)
