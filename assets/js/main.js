@@ -743,12 +743,31 @@
     let currentIndex = 0;
     let isHovered = false;
     let isAnimating = false;
+    let isRotatingSequence = false;
     let cycleInterval = null;
     let revertTimeout = null;
+    let rotationTimers = [];
 
-    function transitionToRole(nextIndex) {
+    function clearAllTimers() {
+      if (cycleInterval) {
+        clearInterval(cycleInterval);
+        cycleInterval = null;
+      }
+      if (revertTimeout) {
+        clearTimeout(revertTimeout);
+        revertTimeout = null;
+      }
+      rotationTimers.forEach((t) => clearTimeout(t));
+      rotationTimers = [];
+      isRotatingSequence = false;
+    }
+
+    function transitionToRole(nextIndex, onComplete) {
       if (isAnimating) return;
-      if (currentIndex === nextIndex && roleText.textContent === roles[nextIndex]) return;
+      if (currentIndex === nextIndex && roleText.textContent === roles[nextIndex]) {
+        if (onComplete) onComplete();
+        return;
+      }
 
       isAnimating = true;
       currentIndex = nextIndex;
@@ -772,28 +791,52 @@
         setTimeout(() => {
           roleText.classList.remove('slide-in');
           isAnimating = false;
+          if (onComplete) onComplete();
         }, 300);
       }, 220);
     }
 
-    function advanceRole() {
+    function advanceRole(onComplete) {
       const nextIdx = (currentIndex + 1) % roles.length;
-      transitionToRole(nextIdx);
+      transitionToRole(nextIdx, onComplete);
     }
 
-    function startCycle() {
-      if (revertTimeout) {
-        clearTimeout(revertTimeout);
-        revertTimeout = null;
-      }
-      if (isHovered) return;
-      isHovered = true;
+    // Single complete rotation for mobile tap:
+    // Cycles through all alternate roles and gracefully stops back at Software Development Engineer.
+    function runSingleRotationSequence() {
+      clearAllTimers();
+      isRotatingSequence = true;
 
-      // Immediately step to the next role on hover
+      // Step 1: Advance to Backend Engineer
       advanceRole();
 
-      // Continue cycling one by one while hovered
-      if (cycleInterval) clearInterval(cycleInterval);
+      // Step 2: Advance to Forward Deployed Engineer after 1.7s
+      const timer1 = setTimeout(() => {
+        advanceRole();
+
+        // Step 3: Advance back to Software Development Engineer after another 1.7s and stop
+        const timer2 = setTimeout(() => {
+          advanceRole(() => {
+            isRotatingSequence = false;
+          });
+        }, 1700);
+
+        rotationTimers.push(timer2);
+      }, 1700);
+
+      rotationTimers.push(timer1);
+    }
+
+    // Continuous cycling for desktop mouse hover only
+    function startHoverCycle() {
+      const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+      if (isTouch) return;
+
+      clearAllTimers();
+      isHovered = true;
+
+      advanceRole();
+
       cycleInterval = setInterval(() => {
         if (isHovered) {
           advanceRole();
@@ -801,8 +844,7 @@
       }, 2000);
     }
 
-    function stopCycle(e) {
-      // If moving to another element inside heroTitle, ignore
+    function stopHoverCycle(e) {
       if (e && e.relatedTarget && heroTitle.contains(e.relatedTarget)) {
         return;
       }
@@ -813,30 +855,49 @@
         cycleInterval = null;
       }
 
-      // Gracefully revert back to default role (Software Development Engineer)
       if (revertTimeout) clearTimeout(revertTimeout);
       revertTimeout = setTimeout(() => {
-        if (!isHovered && currentIndex !== 0) {
+        if (!isHovered && currentIndex !== 0 && !isRotatingSequence) {
           transitionToRole(0);
         }
       }, 650);
     }
 
-    heroTitle.addEventListener('mouseenter', startCycle);
-    heroTitle.addEventListener('mouseleave', stopCycle);
-    roleRotator.addEventListener('mouseenter', startCycle);
+    // Desktop mouse hover events
+    heroTitle.addEventListener('mouseenter', (e) => {
+      if (window.matchMedia('(hover: none), (pointer: coarse)').matches) return;
+      startHoverCycle();
+    });
 
-    // Support click or mobile tap to advance immediately
+    heroTitle.addEventListener('mouseleave', (e) => {
+      if (window.matchMedia('(hover: none), (pointer: coarse)').matches) return;
+      stopHoverCycle(e);
+    });
+
+    // Mobile tap & click handling:
+    // If tapped while running, immediately complete and stop at default role.
+    // If tapped while idle, perform one complete rotation through the roles and stop.
     roleRotator.addEventListener('click', (e) => {
       e.stopPropagation();
-      advanceRole();
+
+      if (isRotatingSequence) {
+        clearAllTimers();
+        transitionToRole(0);
+      } else {
+        runSingleRotationSequence();
+      }
     });
 
     // Keyboard support
     roleRotator.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        advanceRole();
+        if (isRotatingSequence) {
+          clearAllTimers();
+          transitionToRole(0);
+        } else {
+          runSingleRotationSequence();
+        }
       }
     });
   }

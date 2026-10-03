@@ -437,16 +437,21 @@ svg {
   position: relative;
   cursor: pointer;
   vertical-align: bottom;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.3s ease;
+  border-bottom: none;
+  outline: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
   user-select: none;
   -webkit-user-select: none;
 }
 
 .hero-role-rotator:hover,
-.hero-role-rotator:focus-visible {
-  border-bottom-color: rgba(16, 185, 129, 0.5);
+.hero-role-rotator:focus,
+.hero-role-rotator:focus-visible,
+.hero-role-rotator:active {
+  border-bottom: none;
   outline: none;
+  box-shadow: none;
 }
 
 .hero-role-text {
