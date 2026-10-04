@@ -6,7 +6,7 @@
 (function () {
   'use strict';
 
-  const LIVE_API_URL = 'https://keerthanavaranasi16.github.io/api/v1/profile';
+  const LIVE_API_URL = 'https://keerthanavaranasi.is-a.dev/api/v1/profile';
 
   const profileData = {
     "status": "success",
@@ -139,7 +139,7 @@
       "meta": {
         "version": "v1.0.0",
         "format": "REST JSON",
-        "documentation": "https://keerthanavaranasi16.github.io/#api-console"
+        "documentation": "https://keerthanavaranasi.is-a.dev/#api-console"
       }
     }
   };

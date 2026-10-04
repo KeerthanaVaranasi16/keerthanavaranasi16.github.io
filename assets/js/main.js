@@ -902,7 +902,43 @@
     });
   }
 
+  // --------------------------------------------------------------------------
+  // FAQ ACCORDION (AEO & DIRECT ANSWER OPTIMIZATION)
+  // --------------------------------------------------------------------------
+  function initFaqAccordion() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (!faqItems.length) return;
+
+    faqItems.forEach((item) => {
+      const btn = item.querySelector('.faq-question-btn');
+      if (!btn) return;
+
+      btn.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        // Close other items for clean single-open accordion UX
+        faqItems.forEach((other) => {
+          if (other !== item) {
+            other.classList.remove('active');
+            const otherBtn = other.querySelector('.faq-question-btn');
+            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        // Toggle current item
+        if (isActive) {
+          item.classList.remove('active');
+          btn.setAttribute('aria-expanded', 'false');
+        } else {
+          item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  }
+
   // Initialize
   initHeroParticles();
   initHeroRoleRotator();
+  initFaqAccordion();
 })();

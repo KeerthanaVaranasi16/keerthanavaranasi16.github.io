@@ -27,5 +27,5 @@ User-agent: FacebookBot
 Allow: /
 
 # Discovery Maps
-Sitemap: https://keerthanavaranasi16.github.io/sitemap.xml
-LLMs-Txt: https://keerthanavaranasi16.github.io/llms.txt
+Sitemap: https://keerthanavaranasi.is-a.dev/sitemap.xml
+LLMs-Txt: https://keerthanavaranasi.is-a.dev/llms.txt
