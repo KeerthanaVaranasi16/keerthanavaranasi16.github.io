@@ -33,5 +33,6 @@ Keerthana Varanasi is a Software Development Engineer - 1 at Dhan AI with 2+ yea
 - **Canonical Website**: https://keerthanavaranasi.is-a.dev/
 - **GitHub**: https://github.com/KeerthanaVaranasi16
 - **LinkedIn**: https://linkedin.com/in/keerthanavaranasi
+- **Google Developer Profile**: https://g.dev/keerthanavaranasi
 - **Machine-Readable API**: https://keerthanavaranasi.is-a.dev/api/v1/profile
 - **Email**: keerthanavaranasi16@gmail.com
