@@ -67,6 +67,7 @@ High-scale customer self-care platform serving **350,000+ residential telecom su
 
 - **Portfolio**: [https://keerthanavaranasi.is-a.dev/](https://keerthanavaranasi.is-a.dev/)
 - **LinkedIn**: [linkedin.com/in/keerthanavaranasi](https://www.linkedin.com/in/keerthanavaranasi/)
+- **Google Developer Profile**: [g.dev/keerthanavaranasi](https://g.dev/keerthanavaranasi)
 - **GitHub**: [github.com/KeerthanaVaranasi16](https://github.com/KeerthanaVaranasi16)
 - **Email**: [keerthanavaranasi16@gmail.com](mailto:keerthanavaranasi16@gmail.com)
 

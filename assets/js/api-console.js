@@ -134,12 +134,7 @@
         "email": "keerthanavaranasi16@gmail.com",
         "github": "https://github.com/KeerthanaVaranasi16",
         "linkedin": "https://linkedin.com/in/keerthanavaranasi",
-        "portfolio": "https://keerthanavaranasi16.github.io"
-      },
-      "meta": {
-        "version": "v1.0.0",
-        "format": "REST JSON",
-        "documentation": "https://keerthanavaranasi.is-a.dev/#api-console"
+        "portfolio": "https://keerthanavaranasi.is-a.dev/"
       }
     }
   };
