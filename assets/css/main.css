@@ -613,6 +613,14 @@ svg {
   box-shadow: 0 4px 16px rgba(16, 185, 129, 0.4);
 }
 
+.btn-primary .fa-arrow-up-right-from-square {
+  transition: transform var(--transition-fast);
+}
+
+.btn-primary:hover .fa-arrow-up-right-from-square {
+  transform: translate(2px, -2px);
+}
+
 .btn-secondary {
   background: var(--bg-surface);
   border: 1px solid var(--border-card);
